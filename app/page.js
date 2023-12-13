@@ -14,13 +14,15 @@ export default function Page() {
       </div>
 
       {/* 로고 */}
-      <Image
-        className="w-[217px] h-[133px] left-[66px] top-[75px] absolute"
-        src="/ui/logo.png"
-        alt="logo"
-        width={213}
-        height={133}
-      />
+      <Link href="/">
+        <Image
+          className="w-[217px] h-[133px] left-[66px] top-[75px] absolute"
+          src="/ui/logo.png"
+          alt="logo"
+          width={213}
+          height={133}
+        />
+      </Link>
 
       {/* 중앙 텍스트 */}
       <div className="w-[900px] h-[58px] left-[513px] top-[284px] text-center absolute">
