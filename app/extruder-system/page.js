@@ -42,14 +42,14 @@ const Page = () => {
       <section className="w-80 h-[75px] left-[63px] top-[42px] absolute">
         <Link href="/">
           <Image
-            src="/ui/extruder/logo.png"
+            src="/food-cluster/ui/extruder/logo.png"
             alt="logo"
             width={131}
             height={75}
           />
           <Image
             className="left-[103px] top-[24px] absolute"
-            src="/ui/extruder/foodpolis.png"
+            src="/food-cluster/ui/extruder/foodpolis.png"
             alt="foodpolis"
             width={217}
             height={8}
@@ -77,8 +77,8 @@ const Page = () => {
         </div>
         <Link href="/pet-line">
           <Image
-            className="left-[95px] top-[24px] absolute"
-            src="/ui/extruder/img-next-orange.png"
+            className="left-[53px] top-[6px] absolute"
+            src="/food-cluster/ui/extruder/img-next-orange.png"
             alt="img-next-orange"
             width={53}
             height={53}
@@ -145,9 +145,9 @@ const Page = () => {
         </div>
 
         {/* 버튼 */}
-        <div className="w-10 h-10 left-[78px] top-0 absolute bg-red-400 rounded-full" />
+        <div className="w-10 h-10 left-[78px] top-0 absolute bg-red-400 rounded-full cursor-pointer" />
         <div
-          className="left-[88px] top-[11px] absolute text-center text-white text-xl font-bold font-['KoPubDotum']"
+          className="left-[88px] top-[11px] absolute text-center text-white text-xl font-bold font-['KoPubDotum'] cursor-pointer"
           onClick={() => handleStepClick(0)}
         >
           W
@@ -158,7 +158,7 @@ const Page = () => {
         {/* 1 */}
         <div className="w-[211px] h-[78px] left-[259px] top-0 absolute">
           <div
-            className={`w-10 h-10 left-[85px] top-0 absolute rounded-full ${
+            className={`w-10 h-10 left-[85px] top-0 absolute rounded-full cursor-pointer ${
               activeStep >= 1 && activeStep <= 6
                 ? 'bg-red-400'
                 : 'bg-neutral-300'
@@ -166,7 +166,7 @@ const Page = () => {
             onClick={() => handleStepClick(1)}
           />
           <div
-            className="left-[99px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum']"
+            className="left-[99px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum'] cursor-pointer"
             onClick={() => handleStepClick(1)}
           >
             1
@@ -189,7 +189,7 @@ const Page = () => {
         {/* 2 */}
         <div className="w-[211px] h-[78px] left-[525px] top-0 absolute">
           <div
-            className={`w-10 h-10 left-[85px] top-0 absolute rounded-full ${
+            className={`w-10 h-10 left-[85px] top-0 absolute rounded-full cursor-pointer ${
               activeStep >= 2 && activeStep <= 6
                 ? 'bg-red-400'
                 : 'bg-neutral-300'
@@ -212,7 +212,7 @@ const Page = () => {
             </span>
           </div>
           <div
-            className="left-[99px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum']"
+            className="left-[99px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum'] cursor-pointer"
             onClick={() => handleStepClick(2)}
           >
             2
@@ -222,7 +222,7 @@ const Page = () => {
         {/* 3 */}
         <div className="w-[188px] h-[78px] left-[802px] top-0 absolute">
           <div
-            className={`w-10 h-10 left-[74px] top-0 absolute rounded-full ${
+            className={`w-10 h-10 left-[74px] top-0 absolute rounded-full cursor-pointer ${
               activeStep >= 3 && activeStep <= 6
                 ? 'bg-red-400'
                 : 'bg-neutral-300'
@@ -244,7 +244,7 @@ const Page = () => {
             </span>
           </div>
           <div
-            className="left-[88px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum']"
+            className="left-[88px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum'] cursor-pointer"
             onClick={() => handleStepClick(3)}
           >
             3
@@ -253,7 +253,7 @@ const Page = () => {
         {/* 4 */}
         <div className="w-[206px] h-[78px] left-[1060px] top-0 absolute">
           <div
-            className={`w-10 h-10 left-[83px] top-0 absolute rounded-full ${
+            className={`w-10 h-10 left-[83px] top-0 absolute rounded-full cursor-pointer ${
               activeStep >= 4 && activeStep <= 6
                 ? 'bg-red-400'
                 : 'bg-neutral-300'
@@ -275,7 +275,7 @@ const Page = () => {
             </span>
           </div>
           <div
-            className="left-[97px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum']"
+            className="left-[97px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum'] cursor-pointer"
             onClick={() => handleStepClick(4)}
           >
             4
@@ -285,7 +285,7 @@ const Page = () => {
         {/* 5 */}
         <div className="w-[206px] h-[78px] left-[1325px] top-0 absolute">
           <div
-            className={`w-10 h-10 left-[83px] top-0 absolute rounded-full ${
+            className={`w-10 h-10 left-[83px] top-0 absolute rounded-full cursor-pointer ${
               activeStep >= 5 && activeStep <= 6
                 ? 'bg-red-400'
                 : 'bg-neutral-300'
@@ -307,7 +307,7 @@ const Page = () => {
             </span>
           </div>
           <div
-            className="left-[97px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum']"
+            className="left-[97px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum'] cursor-pointer"
             onClick={() => handleStepClick(5)}
           >
             5
@@ -317,7 +317,7 @@ const Page = () => {
         {/* 6 */}
         <div className="w-[148px] h-[78px] left-[1619px] top-0 absolute">
           <div
-            className={`w-10 h-10 left-[54px] top-0 absolute rounded-full ${
+            className={`w-10 h-10 left-[54px] top-0 absolute rounded-full cursor-pointer ${
               activeStep === 6 ? 'bg-red-400' : 'bg-neutral-300'
             }`}
             onClick={() => handleStepClick(6)}
@@ -335,7 +335,7 @@ const Page = () => {
             </span>
           </div>
           <div
-            className="left-[68px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum']"
+            className="left-[68px] top-[9px] absolute text-center text-white text-xl font-bold font-['KoPubDotum'] cursor-pointer"
             onClick={() => handleStepClick(6)}
           >
             6
@@ -354,16 +354,16 @@ const Page = () => {
 
       {/* 이전/다음 버튼 */}
       <Image
-        className="left-[100px] top-[647px] absolute"
-        src="/ui/extruder/btn-pre.png"
+        className="left-[100px] top-[647px] absolute cursor-pointer"
+        src="/food-cluster/ui/extruder/btn-pre.png"
         alt="img-next-orange"
         width={69}
         height={69}
         onClick={handlePreviousClick}
       />
       <Image
-        className="left-[1820px] top-[647px] absolute"
-        src="/ui/extruder/btn-next.png"
+        className="left-[1820px] top-[647px] absolute cursor-pointer"
+        src="/food-cluster/ui/extruder/btn-next.png"
         alt="img-next-orange"
         width={69}
         height={69}
@@ -380,7 +380,7 @@ const Page = () => {
         <InfoContent activeStep={activeStep} />
         <Image
           className="left-[26px] top-0 absolute"
-          src="/ui/extruder/script-logo.png"
+          src="/food-cluster/ui/extruder/script-logo.png"
           alt="script-logo"
           width={176}
           height={85}
