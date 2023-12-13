@@ -1,4 +1,9 @@
-import { Environment, OrbitControls, useFBX } from '@react-three/drei'
+import {
+  CameraControls,
+  Environment,
+  OrbitControls,
+  useFBX,
+} from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { EffectComposer, Outline, Selection } from '@react-three/postprocessing'
 import { Perf } from 'r3f-perf'
@@ -20,7 +25,7 @@ const ExtruderSystemScene = () => {
         <Suspense>
           {/* <Environment preset="city" /> */}
           <directionalLight position={[50, 170, 370]} intensity={0.5} />
-          <Selection>
+          {/* <Selection>
             <EffectComposer multisampling={1} autoClear={false}>
               <Outline
                 blur
@@ -30,9 +35,15 @@ const ExtruderSystemScene = () => {
                 xRay={false}
               />
             </EffectComposer>
-            <primitive object={fbx} />
-          </Selection>
-          <OrbitControls />
+
+          </Selection> */}
+          <primitive object={fbx} />
+          <CameraControls
+            verticalDragToForward={true}
+            dollySpeed={0.1}
+            minPolarAngle={-Math.PI / 4}
+            maxPolarAngle={Math.PI / 2}
+          />
           <Perf position="bottom-right" />
         </Suspense>
       </Canvas>

@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <div className="bg-white">
       {/* 라임색 배경 */}
-      <div className="absolute w-full h-[321px] left-0 top-[759px] bg-lime-500" />
+      <div className="absolute w-[1920px] h-[321px] left-0 top-[759px] bg-lime-500" />
 
       {/* 하단 안내 문구 */}
       <div className="w-[1042px] h-[27px] left-[439px] top-[868px] absolute text-center text-white text-base font-medium font-['Gmarket Sans TTF']">

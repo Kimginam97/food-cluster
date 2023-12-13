@@ -17,6 +17,7 @@
     "r3f-perf": "^7.1.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-use-refs": "^1.0.1",
     "three": "^0.159.0"
   },
   "devDependencies": {

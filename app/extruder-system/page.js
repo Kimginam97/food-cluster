@@ -16,7 +16,7 @@ const InfoContent = ({ activeStep }) => {
   ]
 
   return (
-    <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-medium font-['Gmarket Sans TTF']">
+    <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-bold font-['Gmarket Sans TTF']">
       {contents[activeStep]}
     </div>
   )
@@ -184,7 +184,7 @@ const Page = () => {
             <span className="text-xl font-bold font-['KoPubDotum']">
               STEP 01 |{' '}
             </span>
-            <span className="text-xl font-medium font-['KoPubDotum']">
+            <span className="text-xl font-bold font-['KoPubDotum']">
               조작 패널 설정
             </span>
           </div>
@@ -242,7 +242,7 @@ const Page = () => {
             <span className="text-xl font-bold font-['KoPubDotum']">
               STEP 03 |{' '}
             </span>
-            <span className="text-xl font-medium font-['KoPubDotum']">
+            <span className="text-xl font-bold font-['KoPubDotum']">
               스크류 동작
             </span>
           </div>
@@ -273,7 +273,7 @@ const Page = () => {
             <span className="text-xl font-bold font-['KoPubDotum']">
               STEP 04 |{' '}
             </span>
-            <span className="text-xl font-medium font-['KoPubDotum']">
+            <span className="text-xl font-bold font-['KoPubDotum']">
               성형다이 설치
             </span>
           </div>
@@ -305,7 +305,7 @@ const Page = () => {
             <span className="text-xl font-bold font-['KoPubDotum']">
               STEP 05 |{' '}
             </span>
-            <span className="text-xl font-medium font-['KoPubDotum']">
+            <span className="text-xl font-bold font-['KoPubDotum']">
               냉각다이 고정
             </span>
           </div>
@@ -333,7 +333,7 @@ const Page = () => {
             <span className="text-xl font-bold font-['KoPubDotum']">
               STEP 06 |{' '}
             </span>
-            <span className="text-xl font-medium font-['KoPubDotum']">
+            <span className="text-xl font-bold font-['KoPubDotum']">
               결과물
             </span>
           </div>

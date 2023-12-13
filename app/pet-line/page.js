@@ -15,7 +15,7 @@ const InfoContent = ({ activeStep }) => {
   ]
 
   return (
-    <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-medium font-['Gmarket Sans TTF']">
+    <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-bold font-['Gmarket Sans TTF']">
       {contents[activeStep]}
     </div>
   )
@@ -182,7 +182,7 @@ const Page = () => {
             <span className="text-xl font-bold font-['KoPubDotum']">
               STEP 01 |{' '}
             </span>
-            <span className="text-xl font-medium font-['KoPubDotum']">
+            <span className="text-xl font-bold font-['KoPubDotum']">
               빈 PET 투입
             </span>
           </div>
@@ -240,7 +240,7 @@ const Page = () => {
             <span className="text-xl font-bold font-['KoPubDotum']">
               STEP 03 |{' '}
             </span>
-            <span className="text-xl font-medium font-['KoPubDotum']">
+            <span className="text-xl font-bold font-['KoPubDotum']">
               PET 이동
             </span>
           </div>
@@ -271,7 +271,7 @@ const Page = () => {
             <span className="text-xl font-bold font-['KoPubDotum']">
               STEP 04 |{' '}
             </span>
-            <span className="text-xl font-medium font-['KoPubDotum']">
+            <span className="text-xl font-bold font-['KoPubDotum']">
               PET 세척
             </span>
           </div>
@@ -303,7 +303,7 @@ const Page = () => {
             <span className="text-xl font-bold font-['KoPubDotum']">
               STEP 05 |{' '}
             </span>
-            <span className="text-xl font-medium font-['KoPubDotum']">
+            <span className="text-xl font-bold font-['KoPubDotum']">
               라벨 부착
             </span>
           </div>
@@ -331,7 +331,7 @@ const Page = () => {
             <span className="text-xl font-bold font-['KoPubDotum']">
               STEP 06 |{' '}
             </span>
-            <span className="text-xl font-medium font-['KoPubDotum']">
+            <span className="text-xl font-bold font-['KoPubDotum']">
               로봇 적재
             </span>
           </div>
