@@ -3,21 +3,36 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
+const InfoContent = ({ activeStep }) => {
+  const contents = [
+    '분말형 원료를 일정시간 가열-압축-혼합-용융-성형되도록 가공하는 압출성형기입니다.',
+    '냉각펌프팬, 급수펌프, 오일펌프, 익스트루트 등 압출과정을 위한 운전을 설정합니다.',
+    '장비 초기 세팅이 완료되면, 분말원료를 호퍼에 투입합니다.',
+    '호퍼에 투입된 분말형 원료가 스크류를 통해 가열, 압축, 혼합, 용융됩니다.',
+    '고수분 식물성 조직단백질을 제조하기 위해 압출성형기 끝단에 성형다이를 설치합니다.',
+    '성형다이 설치가 끝나면 성형다이 끝단에 냉각다이를 설치합니다.',
+    '압출성형 공정을 거쳐 식물성 조직 단백질이 제조됩니다.',
+  ]
+
+  return (
+    <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-medium font-['Gmarket Sans TTF']">
+      {contents[activeStep]}
+    </div>
+  )
+}
+
 const Page = () => {
   const [activeStep, setActiveStep] = useState(0)
 
-  // 클릭 시 activeStep 변경
   const handleStepClick = (step) => {
     setActiveStep(step)
   }
 
   const handlePreviousClick = () => {
-    // Update activeStep to the previous value within the range of 1 to 6
     setActiveStep((prevStep) => Math.max(prevStep - 1, 0))
   }
 
   const handleNextClick = () => {
-    // Update activeStep to the next value within the range of 1 to 6
     setActiveStep((prevStep) => Math.min(prevStep + 1, 6))
   }
 
@@ -41,6 +56,7 @@ const Page = () => {
           />
         </Link>
       </section>
+
       {/* 압출 성형기 */}
       <section className="w-[300px] h-[111px] left-[816px] top-[42px] absolute">
         <div className="left-0 top-0 absolute text-center text-black text-6xl font-bold font-['Gmarket Sans TTF']">
@@ -50,6 +66,7 @@ const Page = () => {
           Extruder System
         </div>
       </section>
+
       {/* PET 라인 */}
       <section className="w-[371px] h-[74px] left-[1365px] top-[65px] absolute">
         <div className="left-[215px] top-0 absolute text-center text-black text-opacity-40 text-[35px] font-bold font-['Gmarket Sans TTF']">
@@ -127,7 +144,7 @@ const Page = () => {
           ></div>
         </div>
 
-        {/* W */}
+        {/* 버튼 */}
         <div className="w-10 h-10 left-[78px] top-0 absolute bg-red-400 rounded-full" />
         <div
           className="left-[88px] top-[11px] absolute text-center text-white text-xl font-bold font-['KoPubDotum']"
@@ -334,6 +351,8 @@ const Page = () => {
           src="https://via.placeholder.com/1628x734"
         />
       </section>
+
+      {/* 이전/다음 버튼 */}
       <Image
         className="left-[100px] top-[647px] absolute"
         src="/ui/extruder/btn-pre.png"
@@ -358,46 +377,7 @@ const Page = () => {
         <div className="w-[134.37px] h-[42.76px] left-[53.19px] top-[95.69px] absolute text-center text-white text-3xl font-bold font-['Gmarket Sans TTF']">
           INFO
         </div>
-        {/* 내용 */}
-        {activeStep === 0 && (
-          <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-medium font-['Gmarket Sans TTF']">
-            분말형 원료를 일정시간 가열-압축-혼합-용융-성형되도록 가공하는
-            압출성형기입니다.
-          </div>
-        )}
-        {activeStep === 1 && (
-          <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-medium font-['Gmarket Sans TTF']">
-            냉각펌프팬, 급수펌프, 오일펌프, 익스트루트 등 압출과정을 위한 운전을
-            설정합니다.
-          </div>
-        )}
-        {activeStep === 2 && (
-          <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-medium font-['Gmarket Sans TTF']">
-            장비 초기 세팅이 완료되면, 분말원료를 호퍼에 투입합니다.
-          </div>
-        )}
-        {activeStep === 3 && (
-          <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-medium font-['Gmarket Sans TTF']">
-            호퍼에 투입된 분말형 원료가 스크류를 통해 가열, 압축, 혼합,
-            용융됩니다.
-          </div>
-        )}
-        {activeStep === 4 && (
-          <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-medium font-['Gmarket Sans TTF']">
-            고수분 식물성 조직단백질을 제조하기 위해 압출성형기 끝단에
-            성형다이를 설치합니다.
-          </div>
-        )}
-        {activeStep === 5 && (
-          <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-medium font-['Gmarket Sans TTF']">
-            성형다이 설치가 끝나면 성형다이 끝단에 냉각다이를 설치합니다.
-          </div>
-        )}
-        {activeStep === 6 && (
-          <div className="w-[1416.36px] h-[35.09px] left-[243px] top-[98px] absolute text-center text-black text-3xl font-medium font-['Gmarket Sans TTF']">
-            압출성형 공정을 거쳐 식물성 조직 단백질이 제조됩니다.
-          </div>
-        )}
+        <InfoContent activeStep={activeStep} />
         <Image
           className="left-[26px] top-0 absolute"
           src="/ui/extruder/script-logo.png"
