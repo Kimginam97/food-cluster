@@ -94,7 +94,7 @@ const Page = () => {
         <div className="w-[1556px] h-[0px] left-[118px] top-[23px] absolute">
           {/* 1 */}
           <div
-            className={`w-[226px] h-[0px] left-0 top-0 absolute border-4 ${
+            className={`w-[226px] h-[0px] left-0 top-0 absolute border-4 border-dashed ${
               activeStep >= 1 && activeStep <= 6
                 ? 'border-red-400'
                 : 'border-neutral-300'
@@ -103,7 +103,7 @@ const Page = () => {
 
           {/* 2 */}
           <div
-            className={`w-[226px] h-[0px] left-[267px] top-0 absolute border-4 ${
+            className={`w-[226px] h-[0px] left-[267px] top-0 absolute border-4 border-dashed ${
               activeStep >= 2 && activeStep <= 6
                 ? 'border-red-400'
                 : 'border-neutral-300'
@@ -111,7 +111,7 @@ const Page = () => {
           ></div>
           {/* 3 */}
           <div
-            className={`w-[226px] h-[0px] left-[533px] top-0 absolute border-4 ${
+            className={`w-[226px] h-[0px] left-[533px] top-0 absolute border-4 border-dashed ${
               activeStep >= 3 && activeStep <= 6
                 ? 'border-red-400'
                 : 'border-neutral-300'
@@ -120,7 +120,7 @@ const Page = () => {
 
           {/* 4 */}
           <div
-            className={`w-[227px] h-[0px] left-[799px] top-0 absolute border-4 ${
+            className={`w-[227px] h-[0px] left-[799px] top-0 absolute border-4 border-dashed ${
               activeStep >= 4 && activeStep <= 6
                 ? 'border-red-400'
                 : 'border-neutral-300'
@@ -129,7 +129,7 @@ const Page = () => {
 
           {/* 5 */}
           <div
-            className={`w-[227px] h-[0px] left-[1064px] top-0 absolute border-4 ${
+            className={`w-[227px] h-[0px] left-[1064px] top-0 absolute border-4 border-dashed ${
               activeStep >= 5 && activeStep <= 6
                 ? 'border-red-400'
                 : 'border-neutral-300'
@@ -138,7 +138,7 @@ const Page = () => {
 
           {/* 6 */}
           <div
-            className={`w-[227px] h-[0px] left-[1329px] top-0 absolute border-4 ${
+            className={`w-[227px] h-[0px] left-[1329px] top-0 absolute border-4 border-dashed ${
               activeStep === 6 ? 'border-red-400' : 'border-neutral-300'
             }`}
           ></div>
