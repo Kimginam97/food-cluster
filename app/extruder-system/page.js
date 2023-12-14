@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import ExtruderSystemScene from '../components/ExtruderSystemScene'
+import ViewScene from '../components/ViewScene'
 
 const InfoContent = ({ activeStep }) => {
   const contents = [
