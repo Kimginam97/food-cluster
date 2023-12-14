@@ -1,0 +1,129 @@
+[
+  {
+    "id": "Brep",
+    "name": "ProcessOverView",
+    "position": {
+      "x": 50,
+      "y": 170,
+      "z": 370
+    },
+    "target": {
+      "x": 0,
+      "y": 0,
+      "Z": 0
+    },
+    "preAnimation": [],
+    "animation": []
+  },
+  {
+    "id": "Brep.038",
+    "name": "ControlPanel",
+    "position": {
+      "x": -75,
+      "y": 170,
+      "z": 250
+    },
+    "target": {
+      "x": 200,
+      "y": 80,
+      "Z": 40
+    },
+    "preAnimation": [],
+    "animation": []
+  },
+  {
+    "id": "Brep.782",
+    "name": "Hopper",
+    "position": {
+      "x": 90,
+      "y": 170,
+      "z": 100
+    },
+    "target": {
+      "x": 0,
+      "y": 90,
+      "Z": 0
+    },
+    "preAnimation": [],
+    "animation": ["Brep.782|Brep.782Action.001"]
+  },
+  {
+    "id": "Brep.1383",
+    "name": "Screw",
+    "position": {
+      "x": 85,
+      "y": 170,
+      "z": 100
+    },
+    "target": {
+      "x": -100,
+      "y": 80,
+      "Z": 85
+    },
+    "preAnimation": [],
+    "animation": []
+  },
+  {
+    "id": "Brep.056",
+    "name": "MoldingDie",
+    "position": {
+      "x": 20,
+      "y": 105,
+      "z": 250
+    },
+    "target": {
+      "x": -160,
+      "y": 80,
+      "Z": 10
+    },
+    "preAnimation": ["Brep.782|Brep.782Action.001"],
+    "animation": ["Brep.054|Brep.054Action", "Brep.056|Brep.056Action"]
+  },
+  {
+    "id": "Brep.1219",
+    "name": "CoolingDie",
+    "position": {
+      "x": 80,
+      "y": 100,
+      "z": 290
+    },
+    "target": {
+      "x": -200,
+      "y": 80,
+      "Z": 120
+    },
+    "preAnimation": [
+      "Brep.782|Brep.782Action.001",
+      "Brep.054|Brep.054Action",
+      "Brep.056|Brep.056Action"
+    ],
+    "animation": ["Brep.1219|Brep.1219Action"]
+  },
+  {
+    "id": "Brep.1219",
+    "name": "finish",
+    "position": {
+      "x": -40,
+      "y": 100,
+      "z": 290
+    },
+    "target": {
+      "x": -90,
+      "y": 80,
+      "Z": 120
+    },
+    "preAnimation": [
+      "Brep.782|Brep.782Action.001",
+      "Brep.054|Brep.054Action",
+      "Brep.056|Brep.056Action",
+      "Brep.1219|Brep.1219Action"
+    ],
+    "animation": [
+      "Cylinder.001|CylinderAction.001",
+      "Cylinder.002|CylinderAction.001",
+      "Cylinder.003|CylinderAction.001",
+      "Cylinder.004|CylinderAction.001",
+      "Cylinder.005|CylinderAction.001"
+    ]
+  }
+]
