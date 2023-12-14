@@ -16,7 +16,7 @@
     "animation": []
   },
   {
-    "id": "Brep.038",
+    "id": "Brep038",
     "name": "ControlPanel",
     "position": {
       "x": -75,
@@ -32,7 +32,7 @@
     "animation": []
   },
   {
-    "id": "Brep.782",
+    "id": "Brep782",
     "name": "Hopper",
     "position": {
       "x": 90,
@@ -48,7 +48,7 @@
     "animation": ["Brep.782|Brep.782Action.001"]
   },
   {
-    "id": "Brep.1383",
+    "id": "Brep1383",
     "name": "Screw",
     "position": {
       "x": 85,
@@ -64,7 +64,7 @@
     "animation": []
   },
   {
-    "id": "Brep.056",
+    "id": "Brep056",
     "name": "MoldingDie",
     "position": {
       "x": 20,
@@ -80,7 +80,7 @@
     "animation": ["Brep.054|Brep.054Action", "Brep.056|Brep.056Action"]
   },
   {
-    "id": "Brep.1219",
+    "id": "Brep1219",
     "name": "CoolingDie",
     "position": {
       "x": 80,
@@ -100,7 +100,7 @@
     "animation": ["Brep.1219|Brep.1219Action"]
   },
   {
-    "id": "Brep.1219",
+    "id": "Brep1219",
     "name": "finish",
     "position": {
       "x": -40,

@@ -2,8 +2,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import ViewScene from '../components/ViewScene'
-import MiniScene from '../components/MiniScene'
+import ExtruderMainScene from '../components/ExtruderMainScene'
+import ExtruderMinimapScene from '../components/ExtruderMinimapScene'
 
 const InfoContent = ({ activeStep }) => {
   const contents = [
@@ -348,8 +348,14 @@ const Page = () => {
       </div>
 
       {/* 3D 화면 */}
-      <ViewScene url="/models/injection-molding.fbx" />
-      <MiniScene url="/models/injection-molding-minimap.fbx" />
+      <ExtruderMainScene
+        url="/models/injection-molding.fbx"
+        activeStep={activeStep}
+      />
+      <ExtruderMinimapScene
+        url="/models/injection-molding-minimap.fbx"
+        activeStep={activeStep}
+      />
 
       {/* 이전/다음 버튼 */}
       <Image

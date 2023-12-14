@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
-import ViewScene from '../components/ViewScene'
-import MiniScene from '../components/MiniScene'
+import ExtruderMainScene from '../components/ExtruderMainScene'
+import ExtruderMinimapScene from '../components/ExtruderMinimapScene'
 
 const Page = () => {
   const [selectedView, setSelectedView] = useState(0)
@@ -21,11 +21,14 @@ const Page = () => {
         ))}
       </div>
       {/* ViewScene에 선택된 값을 전달 */}
-      <ViewScene
-        selectedView={selectedView}
+      <ExtruderMainScene
+        activeStep={selectedView}
         url="/models/injection-molding.fbx"
       />
-      <MiniScene url="/models/injection-molding-minimap.fbx" />
+      <ExtruderMinimapScene
+        activeStep={selectedView}
+        url="/models/injection-molding-minimap.fbx"
+      />
     </>
   )
 }

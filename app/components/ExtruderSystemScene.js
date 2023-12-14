@@ -8,10 +8,8 @@ import {
   useFBX,
 } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import { EffectComposer, Outline, Selection } from '@react-three/postprocessing'
-import { Perf } from 'r3f-perf'
 import React from 'react'
-import { Suspense } from 'react'
+
 import useRefs from 'react-use-refs'
 
 const ExtruderSystemScene = () => {

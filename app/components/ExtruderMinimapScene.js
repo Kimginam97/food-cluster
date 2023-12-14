@@ -1,13 +1,17 @@
 'use client'
-import * as THREE from 'three'
+
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera, useFBX, CameraControls } from '@react-three/drei'
-import ExtruderModelMinimap from './ExtruderModelMinimap'
 
-const MiniScene = ({ url }) => {
+import { EffectComposer, Outline, Selection } from '@react-three/postprocessing'
+import ExtruderMinimapModel from './ExtruderMinimapModel'
+
+const ExtruderMinimapScene = ({ url, activeStep }) => {
   return (
     <Canvas
       className=" bg-white"
+      gl={{ logarithmicDepthBuffer: true, antialias: false }}
+      frameloop="demand"
       style={{
         width: '336px',
         height: '195px',
@@ -24,11 +28,22 @@ const MiniScene = ({ url }) => {
         makeDefault
       />
 
-      <ExtruderModelMinimap url={url} />
+      <Selection>
+        <EffectComposer multisampling={1} autoClear={false}>
+          <Outline
+            blur
+            visibleEdgeColor="red"
+            edgeStrength={1000}
+            width={800}
+            xRay={false}
+          />
+        </EffectComposer>
+        <ExtruderMinimapModel url={url} activeStep={activeStep} />
+      </Selection>
 
       <CameraControls enabled={false} />
     </Canvas>
   )
 }
 
-export default MiniScene
+export default ExtruderMinimapScene
