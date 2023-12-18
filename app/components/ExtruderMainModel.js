@@ -16,6 +16,7 @@ const ExtruderMainModel = ({ url, activeStep }) => {
     // 이전 애니메이션을 모두 정지
     mixer.stopAllAction()
 
+    // 애니메이션 시간지정 함수
     const playAnimationWithStopTime = (clip, stopAtTime) => {
       const action = mixer.clipAction(clip)
       action.reset().play()
@@ -40,7 +41,6 @@ const ExtruderMainModel = ({ url, activeStep }) => {
       const clip = fbx.animations.find((animationClip) =>
         animationClip.name.includes(animationName)
       )
-      console.log(clip)
       if (clip) {
         switch (clip.name) {
           case 'Brep.1219|Brep.1219Action':
