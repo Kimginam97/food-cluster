@@ -12,7 +12,8 @@
       "y": 0,
       "Z": 0
     },
-    "pauseTimeAnimations": [
+    "startTimeAnimations": [],
+    "endTimeAnimations": [
       "Cylinder|CylinderAction.001",
       "Cylinder.001|CylinderAction.001",
       "Cylinder.002|CylinderAction.001",
@@ -35,7 +36,8 @@
       "y": 80,
       "Z": 40
     },
-    "pauseTimeAnimations": [
+    "startTimeAnimations": [],
+    "endTimeAnimations": [
       "Cylinder|CylinderAction.001",
       "Cylinder.001|CylinderAction.001",
       "Cylinder.002|CylinderAction.001",
@@ -58,7 +60,8 @@
       "y": 120,
       "Z": 0
     },
-    "pauseTimeAnimations": [
+    "startTimeAnimations": [],
+    "endTimeAnimations": [
       "Cylinder|CylinderAction.001",
       "Cylinder.001|CylinderAction.001",
       "Cylinder.002|CylinderAction.001",
@@ -81,8 +84,8 @@
       "y": 80,
       "Z": 120
     },
-    "pauseTimeAnimations": [
-      "Brep.782|Brep.782Action.001",
+    "startTimeAnimations": ["Brep.1219|Brep.1219Action"],
+    "endTimeAnimations": [
       "Brep.054|Brep.054Action",
       "Brep.056|Brep.056Action",
       "Cylinder|CylinderAction.001",
@@ -107,7 +110,8 @@
       "y": 80,
       "Z": 40
     },
-    "pauseTimeAnimations": [
+    "startTimeAnimations": ["Brep.1219|Brep.1219Action"],
+    "endTimeAnimations": [
       "Brep.782|Brep.782Action.001",
       "Cylinder|CylinderAction.001",
       "Cylinder.001|CylinderAction.001",
@@ -131,7 +135,8 @@
       "y": 80,
       "Z": 120
     },
-    "pauseTimeAnimations": [
+    "startTimeAnimations": [],
+    "endTimeAnimations": [
       "Brep.782|Brep.782Action.001",
       "Brep.054|Brep.054Action",
       "Brep.056|Brep.056Action",
@@ -157,7 +162,8 @@
       "y": 80,
       "Z": 120
     },
-    "pauseTimeAnimations": [
+    "startTimeAnimations": [],
+    "endTimeAnimations": [
       "Brep.782|Brep.782Action.001",
       "Brep.054|Brep.054Action",
       "Brep.056|Brep.056Action",

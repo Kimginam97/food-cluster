@@ -35,12 +35,30 @@ const ExtruderMainModel = ({ url, activeStep }) => {
       }
     })
 
-    // 시간지정해서 멈춰야될 애니메이션
-    info[activeStep].pauseTimeAnimations.forEach((animationName) => {
+    // 시작하는 시간에 지정해서 멈춰야될 애니메이션
+    info[activeStep].startTimeAnimations.forEach((animationName) => {
       const clip = fbx.animations.find((animationClip) =>
         animationClip.name.includes(animationName)
       )
+      console.log(clip)
+      if (clip) {
+        switch (clip.name) {
+          case 'Brep.1219|Brep.1219Action':
+            playAnimationWithStopTime(clip, 0)
+            break
+          default:
+            // Handle other animations
+            playAnimationWithStopTime(clip, 0)
+            break
+        }
+      }
+    })
 
+    // 끝나는 시간에 지정해서 멈춰야될 애니메이션
+    info[activeStep].endTimeAnimations.forEach((animationName) => {
+      const clip = fbx.animations.find((animationClip) =>
+        animationClip.name.includes(animationName)
+      )
       if (clip) {
         switch (clip.name) {
           case 'Brep.782|Brep.782Action.001':
