@@ -16,33 +16,50 @@ const ExtruderMainModel = ({ url, activeStep }) => {
     // 이전 애니메이션을 모두 정지
     mixer.stopAllAction()
 
-    if (info[activeStep].animations.length) {
-      // animations에 있는 애니메이션 실행
-      info[activeStep].animations.forEach((animationName) => {
-        const clip = fbx.animations.find((animationClip) =>
-          animationClip.name.includes(animationName)
-        )
-        if (clip) {
-          const action = mixer.clipAction(clip)
-          action.loop = THREE.LoopRepeat // 반복 재생
-          action.play()
-        }
-      })
+    const playAnimationWithStopTime = (clip, stopAtTime) => {
+      const action = mixer.clipAction(clip)
+      action.reset().play()
+      action.time = stopAtTime
+      action.paused = true
     }
 
-    if (info[activeStep].preAnimations.length) {
-      // preAnimation에 있는 애니메이션을 종료 상태로 설정
-      info[activeStep].preAnimations.forEach((animationName) => {
-        const clip = fbx.animations.find((animationClip) =>
-          animationClip.name.includes(animationName)
-        )
-        if (clip) {
-          const action = mixer.clipAction(clip)
-          action.reset().setEffectiveTimeScale(1).setEffectiveWeight(1).play()
-          action.paused = true // 애니메이션을 일시 정지하여 종료 상태를 유지
+    // 현재 실행할 애니메이션은 반복재생
+    info[activeStep].animations.forEach((animationName) => {
+      const clip = fbx.animations.find((animationClip) =>
+        animationClip.name.includes(animationName)
+      )
+      if (clip) {
+        const action = mixer.clipAction(clip)
+        action.loop = THREE.LoopRepeat // 반복 재생
+        action.play()
+      }
+    })
+
+    // 시간지정해서 멈춰야될 애니메이션
+    info[activeStep].pauseTimeAnimations.forEach((animationName) => {
+      const clip = fbx.animations.find((animationClip) =>
+        animationClip.name.includes(animationName)
+      )
+
+      if (clip) {
+        switch (clip.name) {
+          case 'Brep.782|Brep.782Action.001':
+            playAnimationWithStopTime(clip, 4.9)
+            break
+          case 'Brep.054|Brep.054Action':
+          case 'Brep.056|Brep.056Action':
+            playAnimationWithStopTime(clip, 3.7)
+            break
+          case 'Brep.1219|Brep.1219Action':
+            playAnimationWithStopTime(clip, 1.2)
+            break
+          default:
+            // Handle other animations
+            playAnimationWithStopTime(clip, 0)
+            break
         }
-      })
-    }
+      }
+    })
   }
 
   useEffect(() => {
