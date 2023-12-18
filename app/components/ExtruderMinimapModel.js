@@ -1,13 +1,11 @@
 import { useFBX } from '@react-three/drei'
 import { Select } from '@react-three/postprocessing'
 
-import { useState } from 'react'
-
 const ExtruderMinimapModel = ({ url, activeStep }) => {
   const fbx = useFBX(url)
 
   useFBX.preload(url)
-  console.log(activeStep)
+
   return (
     <>
       <primitive object={fbx} />

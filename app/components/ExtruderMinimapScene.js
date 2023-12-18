@@ -1,7 +1,7 @@
 'use client'
 
 import { Canvas } from '@react-three/fiber'
-import { PerspectiveCamera, useFBX, CameraControls } from '@react-three/drei'
+import { PerspectiveCamera, CameraControls } from '@react-three/drei'
 
 import { EffectComposer, Outline, Selection } from '@react-three/postprocessing'
 import ExtruderMinimapModel from './ExtruderMinimapModel'

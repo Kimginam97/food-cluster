@@ -1,11 +1,10 @@
 import { useFBX } from '@react-three/drei'
 import { Select } from '@react-three/postprocessing'
 
-const ExtruderMainModel = ({ url, activeStep, info }) => {
+const ExtruderMainModel = ({ url, activeStep }) => {
   const fbx = useFBX(url)
   useFBX.preload(url)
 
-  console.log(activeStep)
   return (
     <>
       <primitive object={fbx} />
