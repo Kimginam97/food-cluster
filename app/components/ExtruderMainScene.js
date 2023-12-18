@@ -10,7 +10,6 @@ const ExtruderMainScene = ({ url, activeStep }) => {
     <Canvas
       className="left-0 top-[282px] absolute bg-stone-50 border border-stone-300"
       gl={{ logarithmicDepthBuffer: true, antialias: false }}
-      frameloop="demand"
       style={{ width: '1920px', height: '798px' }}
     >
       <directionalLight position={[50, 170, 370]} intensity={0.5} />

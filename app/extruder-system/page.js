@@ -56,7 +56,7 @@ const Page = () => {
             src="/food-cluster/ui/extruder/foodpolis.png"
             alt="foodpolis"
             width={217}
-            height={8}
+            height={32}
           />
         </Link>
       </section>
