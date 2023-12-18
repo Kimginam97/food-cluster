@@ -17,7 +17,7 @@ export default function Page() {
       <Link href="/">
         <Image
           className="w-[217px] h-[133px] left-[66px] top-[75px] absolute"
-          src="/ui/logo.png"
+          src="/food-cluster/ui/logo.png"
           alt="logo"
           width={213}
           height={133}
@@ -40,7 +40,7 @@ export default function Page() {
           <div className={styles.logoContainer}>
             <Link href="/extruder-system">
               <Image
-                src="/ui/img-ext.png"
+                src="/food-cluster/ui/img-ext.png"
                 alt="img-ext"
                 width={422}
                 height={271}
@@ -71,7 +71,7 @@ export default function Page() {
           <Link href="/pet-line">
             <Image
               className="w-full h-[271px]"
-              src="/ui/img-pet.png"
+              src="/food-cluster/ui/img-pet.png"
               alt="img-pet"
               width={422}
               height={271}

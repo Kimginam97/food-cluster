@@ -44,7 +44,7 @@ const Page = () => {
       <section className="w-80 h-[75px] left-[63px] top-[42px] absolute">
         <Link href="/">
           <Image
-            src="/ui/extruder/logo.png"
+            src="/food-cluster/ui/extruder/logo.png"
             alt="logo"
             width={131}
             height={75}
@@ -53,7 +53,7 @@ const Page = () => {
         <Link href="/">
           <Image
             className="left-[103px] top-[24px] absolute"
-            src="/ui/extruder/foodpolis.png"
+            src="/food-cluster/ui/extruder/foodpolis.png"
             alt="foodpolis"
             width={217}
             height={8}
@@ -82,7 +82,7 @@ const Page = () => {
         <Link href="/pet-line">
           <Image
             className="left-[53px] top-[6px] absolute"
-            src="/ui/extruder/img-next-orange.png"
+            src="/food-cluster/ui/extruder/img-next-orange.png"
             alt="img-next-orange"
             width={53}
             height={53}
@@ -349,18 +349,18 @@ const Page = () => {
 
       {/* 3D 화면 */}
       <ExtruderMainScene
-        url="/models/injection-molding.fbx"
+        url="/food-cluster/models/injection-molding.fbx"
         activeStep={activeStep}
       />
       <ExtruderMinimapScene
-        url="/models/injection-molding-minimap.fbx"
+        url="/food-cluster/models/injection-molding-minimap.fbx"
         activeStep={activeStep}
       />
 
       {/* 이전/다음 버튼 */}
       <Image
         className="left-[100px] top-[647px] absolute cursor-pointer"
-        src="/ui/extruder/btn-pre.png"
+        src="/food-cluster/ui/extruder/btn-pre.png"
         alt="img-next-orange"
         width={69}
         height={69}
@@ -368,7 +368,7 @@ const Page = () => {
       />
       <Image
         className="left-[1820px] top-[647px] absolute cursor-pointer"
-        src="/ui/extruder/btn-next.png"
+        src="/food-cluster/ui/extruder/btn-next.png"
         alt="img-next-orange"
         width={69}
         height={69}
@@ -385,7 +385,7 @@ const Page = () => {
         <InfoContent activeStep={activeStep} />
         <Image
           className="left-[26px] top-0 absolute"
-          src="/ui/extruder/script-logo.png"
+          src="/food-cluster/ui/extruder/script-logo.png"
           alt="script-logo"
           width={176}
           height={85}

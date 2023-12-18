@@ -42,14 +42,14 @@ const Page = () => {
       <section className="w-80 h-[75px] left-[63px] top-[42px] absolute">
         <Link href="/">
           <Image
-            src="/ui/extruder/logo.png"
+            src="/food-cluster/ui/extruder/logo.png"
             alt="logo"
             width={131}
             height={75}
           />
           <Image
             className="left-[103px] top-[24px] absolute"
-            src="/ui/extruder/foodpolis.png"
+            src="/food-cluster/ui/extruder/foodpolis.png"
             alt="foodpolis"
             width={217}
             height={8}
@@ -79,7 +79,7 @@ const Page = () => {
         <Link href="/extruder-system">
           <Image
             className="left-[62px] top-[17px] absolute"
-            src="/ui/pet/img-next-blue.png"
+            src="/food-cluster/ui/pet/img-next-blue.png"
             alt="img-next-blue"
             width={31}
             height={31}
@@ -356,7 +356,7 @@ const Page = () => {
       {/* 이전/다음 버튼 */}
       <Image
         className="left-[100px] top-[647px] absolute cursor-pointer"
-        src="/ui/pet/btn-pre.png"
+        src="/food-cluster/ui/pet/btn-pre.png"
         alt="img-next-orange"
         width={69}
         height={69}
@@ -364,7 +364,7 @@ const Page = () => {
       />
       <Image
         className="left-[1820px] top-[647px] absolute cursor-pointer"
-        src="/ui/pet/btn-next.png"
+        src="/food-cluster/ui/pet/btn-next.png"
         alt="img-next-orange"
         width={69}
         height={69}
@@ -381,7 +381,7 @@ const Page = () => {
         <InfoContent activeStep={activeStep} />
         <Image
           className="left-[26px] top-0 absolute"
-          src="/ui/extruder/script-logo.png"
+          src="/food-cluster/ui/extruder/script-logo.png"
           alt="script-logo"
           width={176}
           height={85}
