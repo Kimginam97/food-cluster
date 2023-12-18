@@ -5,7 +5,7 @@ import { EffectComposer, Outline, Selection } from '@react-three/postprocessing'
 import ExtruderMainModel from './ExtruderMainModel'
 import ExtruderCameraControl from './ExtruderCameraControl'
 
-const ExtruderMainScene = ({ url, activeStep }) => {
+const ExtruderMainScene = ({ activeStep }) => {
   return (
     <Canvas
       className="left-0 top-[282px] absolute bg-stone-50 border border-stone-300"
@@ -23,7 +23,10 @@ const ExtruderMainScene = ({ url, activeStep }) => {
             xRay={false}
           />
         </EffectComposer>
-        <ExtruderMainModel url={url} activeStep={activeStep} />
+        <ExtruderMainModel
+          url="/food-cluster/models/injection-molding.fbx"
+          activeStep={activeStep}
+        />
         <ExtruderCameraControl activeStep={activeStep} />
       </Selection>
     </Canvas>

@@ -348,14 +348,8 @@ const Page = () => {
       </div>
 
       {/* 3D 화면 */}
-      <ExtruderMainScene
-        url="/food-cluster/models/injection-molding.fbx"
-        activeStep={activeStep}
-      />
-      <ExtruderMinimapScene
-        url="/food-cluster/models/injection-molding-minimap.fbx"
-        activeStep={activeStep}
-      />
+      <ExtruderMainScene activeStep={activeStep} />
+      <ExtruderMinimapScene activeStep={activeStep} />
 
       {/* 이전/다음 버튼 */}
       <Image
