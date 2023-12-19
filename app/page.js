@@ -19,7 +19,7 @@ export default function Page() {
           className="w-[217px] h-[133px] left-[66px] top-[75px] absolute"
           src="/food-cluster/ui/logo.png"
           alt="logo"
-          width={213}
+          width={217}
           height={133}
         />
       </Link>
@@ -44,6 +44,7 @@ export default function Page() {
                 alt="img-ext"
                 width={422}
                 height={271}
+                priority
               />
               <div className={styles.hoverContent}>바로가기</div>
             </Link>
