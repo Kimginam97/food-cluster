@@ -88,6 +88,7 @@
     "endTimeAnimations": [
       "Brep.054|Brep.054Action",
       "Brep.056|Brep.056Action",
+      "Brep.1219|Brep.1219Action",
       "Cylinder|CylinderAction.001",
       "Cylinder.001|CylinderAction.001",
       "Cylinder.002|CylinderAction.001",
@@ -102,13 +103,13 @@
     "name": "MoldingDie",
     "position": {
       "x": 10,
-      "y": 105,
+      "y": 90,
       "z": 200
     },
     "target": {
-      "x": -180,
+      "x": -360,
       "y": 80,
-      "Z": 40
+      "Z": 150
     },
     "startTimeAnimations": ["Brep.1219|Brep.1219Action"],
     "endTimeAnimations": [
@@ -126,14 +127,14 @@
     "id": "Brep1219",
     "name": "CoolingDie",
     "position": {
-      "x": 20,
-      "y": 100,
+      "x": 10,
+      "y": 90,
       "z": 290
     },
     "target": {
-      "x": -250,
+      "x": -500,
       "y": 80,
-      "Z": 120
+      "Z": 200
     },
     "startTimeAnimations": [],
     "endTimeAnimations": [
@@ -154,13 +155,13 @@
     "name": "finish",
     "position": {
       "x": -40,
-      "y": 100,
-      "z": 350
+      "y": 90,
+      "z": 280
     },
     "target": {
-      "x": -90,
+      "x": -500,
       "y": 80,
-      "Z": 120
+      "Z": 200
     },
     "startTimeAnimations": [],
     "endTimeAnimations": [
