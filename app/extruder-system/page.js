@@ -17,7 +17,7 @@ const InfoContent = ({ activeStep }) => {
     '압출성형 공정을 거쳐 식물성 조직 단백질이 제조됩니다.',
   ]
 
-  return <div className={styles.div}>{contents[activeStep]}</div>
+  return <div className={styles.scriptContent}>{contents[activeStep]}</div>
 }
 
 export default function Page() {
@@ -48,7 +48,7 @@ export default function Page() {
         </Link>
         <Link href="/">
           <Image
-            className={styles.logoIcon1}
+            className={styles.foodpolisIcon}
             src="/food-cluster/ui/extruder/foodpolis.png"
             alt="foodpolis"
             width={217}
@@ -56,6 +56,12 @@ export default function Page() {
           />
         </Link>
       </div>
+
+      <div className={styles.titleMainExt}>
+        <b className={styles.b6}>압출성형기</b>
+        <div className={styles.extruderSystem}>Extruder System</div>
+      </div>
+
       <div className={styles.titleSubPet}>
         <b className={styles.pet}>PET 라인</b>
         <div className={styles.petLine}>PET Line</div>
@@ -69,12 +75,8 @@ export default function Page() {
           />
         </Link>
       </div>
-      <div className={styles.titleMainExt}>
-        <b className={styles.b6}>압출성형기</b>
-        <div className={styles.extruderSystem}>Extruder System</div>
-      </div>
 
-      <div className={styles.divLine1} />
+      <div className={styles.navbarLine} />
 
       <div className={styles.btnStep}>
         <div className={styles.line}>
@@ -239,7 +241,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className={styles.bgFrame1}>
+      <div className={styles.threeBg}>
         <ExtruderMinimapScene activeStep={activeStep} />
         <ExtruderMainScene activeStep={activeStep} />
       </div>
@@ -262,8 +264,8 @@ export default function Page() {
       />
 
       <div className={styles.script}>
-        <div className={styles.scriptBg1} />
-        <div className={styles.scriptTitle1} />
+        <div className={styles.scriptBg} />
+        <div className={styles.scriptTitle} />
         <b className={styles.info}>INFO</b>
         <InfoContent activeStep={activeStep} />
         <Image

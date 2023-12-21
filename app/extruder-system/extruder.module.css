@@ -1,90 +1,109 @@
-.bgFrame1 {
-  position: absolute;
-  top: calc(50% - 258px);
-  left: calc(50% - 960px);
-  background-color: #f8f8f8;
-  border: 1px solid #c3c3c3;
-  box-sizing: border-box;
-  width: 1920px;
-  height: 798px;
-}
-
-.scriptBg1 {
-  position: absolute;
-  top: calc(50% + 1.4px);
-  left: calc(50% - 609px);
+/* 메인 화면 */
+.extruderWholeFinal {
+  position: relative;
   background-color: #fff;
-  width: 1446px;
+  width: 100%;
+  height: 1080px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  font-family: 'Gmarket Sans TTF';
+}
+
+/* 로고 */
+.logo {
+  position: absolute;
+  top: calc(50% - 498px);
+  left: calc(50% - 897px);
+  width: 320px;
   height: 75px;
-}
-
-.scriptTitle1 {
-  position: absolute;
-  top: calc(50% + 1.4px);
-  left: calc(50% - 837px);
-  background-color: #f3715a;
-  width: 227.68px;
-  height: 75.2px;
-}
-
-.info {
-  position: absolute;
-  top: calc(50% + 19.1px);
-  left: calc(50% - 783.81px);
-  display: inline-block;
-  width: 134.37px;
-  height: 42.76px;
-}
-
-.div {
-  position: absolute;
-  top: calc(50% + 21.4px);
-  left: calc(50% - 594px);
-  font-weight: 500;
-  color: #000;
-  display: inline-block;
-  width: 1416.36px;
-  height: 35.09px;
-}
-
-.scriptLogoIcon {
-  position: absolute;
-  top: calc(50% - 76.6px);
-  left: calc(50% - 811px);
-  width: 176.45px;
-  height: 84.55px;
-  object-fit: cover;
-}
-
-.script {
-  position: absolute;
-  top: calc(50% + 347px);
-  left: calc(50% - 837px);
-  width: 1674px;
-  height: 153.2px;
-}
-
-.btnNextIcon {
-  position: absolute;
-  top: calc(50% + 107px);
-  left: calc(50% + 860px);
-  width: 69px;
-  height: 69px;
-  object-fit: cover;
   cursor: pointer;
 }
 
-.btnPreIcon {
+.logoIcon {
   position: absolute;
-  top: calc(50% + 107px);
-  left: calc(50% - 929px);
-  width: 69px;
-  height: 69px;
+  top: calc(50% - 37.5px);
+  left: calc(50% - 160px);
+  width: 131px;
+  height: 75px;
+  object-fit: cover;
+}
+
+.foodpolisIcon {
+  position: absolute;
+  top: calc(50% - 13.5px);
+  left: calc(50% - 57px);
+  width: 217px;
+  height: 32px;
+  object-fit: cover;
+}
+
+/* 압출성형기 */
+.titleMainExt {
+  position: absolute;
+  top: calc(50% - 498px);
+  left: calc(50% - 144px);
+  width: 289px;
+  height: 111px;
+  font-size: 60px;
+  color: #000;
+}
+
+.b6 {
+  position: absolute;
+  top: calc(50% - 55.5px);
+  left: calc(50% - 144.5px);
+  cursor: pointer;
+}
+
+.extruderSystem {
+  position: absolute;
+  top: calc(50% + 26.5px);
+  left: calc(50% - 113.5px);
+  font-size: 25px;
+  font-weight: 500;
+  color: rgba(116, 116, 116, 0.5);
+}
+
+/* PET 라인 */
+.titleSubPet {
+  position: absolute;
+  top: calc(50% - 475px);
+  left: calc(50% + 405px);
+  width: 371px;
+  height: 74px;
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.pet {
+  position: absolute;
+  top: calc(50% - 37px);
+  left: calc(50% + 29.5px);
+}
+
+.petLine {
+  position: absolute;
+  top: calc(50% + 14px);
+  left: calc(50% + 60.5px);
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(116, 116, 116, 0.4);
+}
+
+.imgNextOrangeIcon {
+  position: absolute;
+  top: calc(50% - 31px);
+  left: calc(50% - 185.5px);
+  width: 53px;
+  height: 53px;
   object-fit: contain;
   cursor: pointer;
 }
 
-.divLine1 {
+/* navbar 라인 */
+.navbarLine {
   position: absolute;
   top: calc(50% - 362px);
   left: calc(50% - 961px);
@@ -92,6 +111,27 @@
   box-sizing: border-box;
   width: 1922px;
   height: 2px;
+}
+
+/* Step 버튼 */
+.btnStep {
+  position: absolute;
+  top: calc(50% - 350px);
+  left: calc(50% - 883px);
+  width: 1767px;
+  height: 78px;
+  font-size: 20px;
+  color: #d2d2d2;
+  font-family: KoPubDotum;
+}
+
+/* 라인 */
+.line {
+  position: absolute;
+  top: calc(50% - 16px);
+  left: calc(50% - 765.5px);
+  width: 1556px;
+  height: 0px;
 }
 
 .line1 {
@@ -154,18 +194,22 @@
   height: 5px;
 }
 
-
 .lineActive {
   border-top: 5px dashed #f3715a;
-  /* 변경된 색상으로 수정하세요 */
 }
 
-.line {
+/* 버튼 공통 */
+.ellipse {
   position: absolute;
-  top: calc(50% - 16px);
-  left: calc(50% - 765.5px);
-  width: 1556px;
-  height: 0px;
+  height: 51.28%;
+  width: 18.96%;
+  top: 0%;
+  right: 40.76%;
+  bottom: 48.72%;
+  left: 40.28%;
+  border-radius: 50%;
+  background-color: #d2d2d2;
+  cursor: pointer;
 }
 
 .ellipseActive {
@@ -181,27 +225,14 @@
   cursor: pointer;
 }
 
-.ellipse {
-  position: absolute;
-  height: 51.28%;
-  width: 18.96%;
-  top: 0%;
-  right: 40.76%;
-  bottom: 48.72%;
-  left: 40.28%;
-  border-radius: 50%;
-  background-color: #d2d2d2;
-  cursor: pointer;
-}
-
-.span {
-  font-weight: 500;
-}
-
 .step01Container {
   position: absolute;
   top: 71.79%;
   left: 0%;
+}
+
+.span {
+  font-weight: 500;
 }
 
 .b {
@@ -212,14 +243,7 @@
   cursor: pointer;
 }
 
-.b0 {
-  position: absolute;
-  top: 11.54%;
-  left: 44.92%;
-  color: #fff;
-  cursor: pointer;
-}
-
+/* W 버튼 */
 .extruderStep00selectBtn {
   position: absolute;
   top: calc(50% - 39px);
@@ -229,6 +253,15 @@
   color: #f3715a;
 }
 
+.b0 {
+  position: absolute;
+  top: 11.54%;
+  left: 44.92%;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 1 버튼 */
 .extruderStep01UnselectBtn {
   position: absolute;
   top: calc(50% - 39px);
@@ -246,6 +279,7 @@
   color: #f3715a;
 }
 
+/* 2 버튼 */
 .extruderStep02UnselectBtn {
   position: absolute;
   top: calc(50% - 39px);
@@ -263,6 +297,7 @@
   color: #f3715a;
 }
 
+/* 3 버튼 */
 .extruderStep03UnselectBtn {
   position: absolute;
   top: calc(50% - 39px);
@@ -280,6 +315,7 @@
   color: #f3715a;
 }
 
+/* 4 버튼 */
 .extruderStep04UnselectBtn {
   position: absolute;
   top: calc(50% - 39px);
@@ -297,6 +333,7 @@
   color: #f3715a;
 }
 
+/* 5 버튼 */
 .extruderStep05UnselectBtn {
   position: absolute;
   top: calc(50% - 39px);
@@ -314,6 +351,7 @@
   color: #f3715a;
 }
 
+/* 6 버튼 */
 .extruderStep06UnselectBtn {
   position: absolute;
   top: calc(50% - 39px);
@@ -331,146 +369,91 @@
   color: #f3715a;
 }
 
-.whole {
+/* 3D 백그라운드 */
+.threeBg {
   position: absolute;
-  top: calc(50% - 11px);
-  left: calc(50% - 98.5px);
+  top: calc(50% - 258px);
+  left: calc(50% - 960px);
+  background-color: #f8f8f8;
+  border: 1px solid #c3c3c3;
+  box-sizing: border-box;
+  width: 1920px;
+  height: 798px;
 }
 
-.title {
+/* 이전, 다음 버튼 */
+.btnPreIcon {
   position: absolute;
-  top: calc(50% + 17px);
-  left: calc(50% - 98.5px);
-  width: 197px;
-  height: 22px;
-}
-
-.w {
-  position: absolute;
-  top: calc(50% - 11px);
-  left: calc(50% - 10px);
-  cursor: pointer;
-}
-
-.number {
-  position: absolute;
-  top: calc(50% - 28px);
-  left: calc(50% - 10.5px);
-  width: 20px;
-  height: 22px;
-  color: #fff;
-}
-
-
-
-.btnStep {
-  position: absolute;
-  top: calc(50% - 350px);
-  left: calc(50% - 883px);
-  width: 1767px;
-  height: 78px;
-  font-size: 20px;
-  color: #d2d2d2;
-  font-family: KoPubDotum;
-}
-
-.logoIcon {
-  position: absolute;
-  top: calc(50% - 37.5px);
-  left: calc(50% - 160px);
-  width: 131px;
-  height: 75px;
-  object-fit: cover;
-}
-
-.logoIcon1 {
-  position: absolute;
-  top: calc(50% - 13.5px);
-  left: calc(50% - 57px);
-  width: 217px;
-  height: 32px;
-  object-fit: cover;
-}
-
-.logo {
-  position: absolute;
-  top: calc(50% - 498px);
-  left: calc(50% - 897px);
-  width: 320px;
-  height: 75px;
-  cursor: pointer;
-}
-
-.pet {
-  position: absolute;
-  top: calc(50% - 37px);
-  left: calc(50% + 29.5px);
-}
-
-.petLine {
-  position: absolute;
-  top: calc(50% + 14px);
-  left: calc(50% + 60.5px);
-  font-size: 20px;
-  font-weight: 500;
-  color: rgba(116, 116, 116, 0.4);
-}
-
-.imgNextOrangeIcon {
-  position: absolute;
-  top: calc(50% - 31px);
-  left: calc(50% - 185.5px);
-  width: 53px;
-  height: 53px;
+  top: calc(50% + 107px);
+  left: calc(50% - 929px);
+  width: 69px;
+  height: 69px;
   object-fit: contain;
   cursor: pointer;
 }
 
-.titleSubPet {
+.btnNextIcon {
   position: absolute;
-  top: calc(50% - 475px);
-  left: calc(50% + 405px);
-  width: 371px;
-  height: 74px;
-  cursor: pointer;
-  font-size: 35px;
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.b6 {
-  position: absolute;
-  top: calc(50% - 55.5px);
-  left: calc(50% - 144.5px);
+  top: calc(50% + 107px);
+  left: calc(50% + 860px);
+  width: 69px;
+  height: 69px;
+  object-fit: cover;
   cursor: pointer;
 }
 
-.extruderSystem {
+/* 스크립트 */
+.script {
   position: absolute;
-  top: calc(50% + 26.5px);
-  left: calc(50% - 113.5px);
-  font-size: 25px;
-  font-weight: 500;
-  color: rgba(116, 116, 116, 0.5);
+  top: calc(50% + 347px);
+  left: calc(50% - 837px);
+  width: 1674px;
+  height: 153.2px;
 }
 
-.titleMainExt {
+.scriptBg {
   position: absolute;
-  top: calc(50% - 498px);
-  left: calc(50% - 144px);
-  width: 289px;
-  height: 111px;
-  font-size: 60px;
-  color: #000;
-}
-
-.extruderWholeFinal {
-  position: relative;
+  top: calc(50% + 1.4px);
+  left: calc(50% - 609px);
   background-color: #fff;
-  width: 100%;
-  height: 1080px;
-  overflow: hidden;
-  text-align: center;
-  font-size: 30px;
-  color: #fff;
-  font-family: 'Gmarket Sans TTF';
+  width: 1446px;
+  height: 75px;
+}
+
+.scriptTitle {
+  position: absolute;
+  top: calc(50% + 1.4px);
+  left: calc(50% - 837px);
+  background-color: #f3715a;
+  width: 227.68px;
+  height: 75.2px;
+}
+
+.info {
+  position: absolute;
+  top: calc(50% + 19.1px);
+  left: calc(50% - 783.81px);
+  display: inline-block;
+  width: 134.37px;
+  height: 42.76px;
+}
+
+.scriptLogoIcon {
+  position: absolute;
+  top: calc(50% - 76.6px);
+  left: calc(50% - 811px);
+  width: 176.45px;
+  height: 84.55px;
+  object-fit: cover;
+}
+
+.scriptContent {
+  position: absolute;
+  top: calc(50% + 21.4px);
+  left: calc(50% - 594px);
+  font-weight: 500;
+  color: #000;
+  display: inline-block;
+  width: 1416.36px;
+  height: 35.09px;
 }
