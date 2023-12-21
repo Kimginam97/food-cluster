@@ -6,7 +6,7 @@ import { PerspectiveCamera, CameraControls } from '@react-three/drei'
 import { EffectComposer, Outline, Selection } from '@react-three/postprocessing'
 import ExtruderMinimapModel from './ExtruderMinimapModel'
 
-const ExtruderMinimapScene = ({ url, activeStep }) => {
+const ExtruderMinimapScene = ({ activeStep }) => {
   return (
     <Canvas
       className=" bg-white"
@@ -17,6 +17,7 @@ const ExtruderMinimapScene = ({ url, activeStep }) => {
         height: '195px',
         position: 'absolute',
         left: '1461px',
+        top: '460px',
       }} // 스타일 지정
     >
       <directionalLight position={[50, 170, 370]} intensity={0.5} />

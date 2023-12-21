@@ -8,9 +8,8 @@ import ExtruderCameraControl from './ExtruderCameraControl'
 const ExtruderMainScene = ({ activeStep }) => {
   return (
     <Canvas
-      className="left-0 top-[282px] absolute bg-stone-50 border border-stone-300"
       gl={{ logarithmicDepthBuffer: true, antialias: false }}
-      style={{ width: '1920px', height: '798px' }}
+      style={{ width: '100%', height: '100%' }}
     >
       <directionalLight position={[50, 170, 370]} intensity={0.5} />
       <Selection>
