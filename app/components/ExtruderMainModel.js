@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import { useFBX } from '@react-three/drei'
 import { Select } from '@react-three/postprocessing'
 import extruderInfo from '../../db/extruder-model.json'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
 
 const ExtruderMainModel = ({ url, activeStep }) => {
@@ -11,6 +11,11 @@ const ExtruderMainModel = ({ url, activeStep }) => {
 
   const info = useState(extruderInfo)[0]
   const mixer = new THREE.AnimationMixer(fbx)
+
+  const getObjectByChildName = (childName) => {
+    const index = fbx.children.findIndex((v) => v.name === childName)
+    return index !== -1 ? fbx.children[index] : null
+  }
 
   const playAnimation = () => {
     // 이전 애니메이션을 모두 정지
@@ -93,23 +98,28 @@ const ExtruderMainModel = ({ url, activeStep }) => {
       <primitive object={fbx} />
       {/* 1번 컨트롤 패널 */}
       <Select enabled={activeStep === 1}>
-        <primitive object={fbx.children[425]} />
+        <primitive object={getObjectByChildName('Brep038')} />
+        <primitive object={getObjectByChildName('Brep009')} />
+        <primitive object={getObjectByChildName('Brep010')} />
       </Select>
       {/* 2번 호퍼 */}
       <Select enabled={activeStep === 2}>
-        <primitive object={fbx.children[754]} />
+        <primitive object={getObjectByChildName('Brep782')} />
       </Select>
       {/* 3번 스크류 */}
       <Select enabled={activeStep === 3}>
-        <primitive object={fbx.children[655]} />
+        <primitive object={getObjectByChildName('Brep1383')} />
+        <primitive object={getObjectByChildName('Brep065')} />
+        <primitive object={getObjectByChildName('Brep066')} />
       </Select>
       {/* 4번 성형다이 */}
       <Select enabled={activeStep === 4}>
-        <primitive object={fbx.children[1137]} />
+        <primitive object={getObjectByChildName('Brep056')} />
+        <primitive object={getObjectByChildName('Brep054')} />
       </Select>
       {/* 5번 냉각다이 */}
       <Select enabled={activeStep === 5}>
-        <primitive object={fbx.children[797]} />
+        <primitive object={getObjectByChildName('Brep1219')} />
       </Select>
     </>
   )

@@ -242,8 +242,8 @@ export default function Page() {
       </div>
 
       <div className={styles.threeBg}>
-        <ExtruderMinimapScene activeStep={activeStep} />
         <ExtruderMainScene activeStep={activeStep} />
+        {/* <ExtruderMinimapScene activeStep={activeStep} /> */}
       </div>
 
       <Image

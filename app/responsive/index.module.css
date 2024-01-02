@@ -1,0 +1,453 @@
+.logoIcon {
+  position: relative;
+  width: 131px;
+  height: 75px;
+  object-fit: cover;
+}
+
+.logoIcon1 {
+  position: relative;
+  width: 217px;
+  height: 32px;
+  object-fit: cover;
+}
+
+.logo {
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.b {
+  position: relative;
+}
+
+.extruderSystem {
+  position: relative;
+  font-size: 25px;
+  font-weight: 500;
+  color: rgba(116, 116, 116, 0.5);
+}
+
+.titleMainExt {
+  height: 111px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 13px;
+}
+
+.imgNextOrangeIcon {
+  position: relative;
+  width: 53px;
+  height: 53px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.petLine1 {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(116, 116, 116, 0.4);
+}
+
+.petLine {
+  width: 179px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleSubPet {
+  width: 362px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.navbar {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px;
+  z-index: 0;
+}
+
+.divLine1 {
+  align-self: stretch;
+  position: relative;
+  border-top: 2px solid #d9d9d9;
+  box-sizing: border-box;
+  height: 2px;
+  z-index: 1;
+}
+
+.ellipse7 {
+  position: absolute;
+  height: 51.28%;
+  width: 18.96%;
+  top: 0%;
+  right: 40.76%;
+  bottom: 48.72%;
+  left: 40.28%;
+  border-radius: 50%;
+  background-color: #d2d2d2;
+}
+
+.span {
+  font-weight: 500;
+}
+
+.wholeContainer {
+  position: absolute;
+  top: 71.79%;
+  left: 0%;
+}
+
+.w {
+  position: absolute;
+  top: 11.54%;
+  left: 46.92%;
+  color: #fff;
+}
+
+.extruderStep00UnselectBtn {
+  position: relative;
+  width: 211px;
+  height: 78px;
+}
+
+.extruderStep00Btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.ellipse10 {
+  position: absolute;
+  height: 51.28%;
+  width: 21.28%;
+  top: 0%;
+  right: 39.36%;
+  bottom: 48.72%;
+  left: 39.36%;
+  border-radius: 50%;
+  background-color: #d2d2d2;
+}
+
+.b3 {
+  position: absolute;
+  top: 11.54%;
+  left: 46.81%;
+  color: #fff;
+}
+
+.extruderStep03UnselectBtn {
+  position: relative;
+  width: 188px;
+  height: 78px;
+}
+
+.ellipse11 {
+  position: absolute;
+  height: 51.28%;
+  width: 19.42%;
+  top: 0%;
+  right: 40.29%;
+  bottom: 48.72%;
+  left: 40.29%;
+  border-radius: 50%;
+  background-color: #d2d2d2;
+}
+
+.b4 {
+  position: absolute;
+  top: 11.54%;
+  left: 47.09%;
+  color: #fff;
+}
+
+.extruderStep04UnselectBtn {
+  position: relative;
+  width: 206px;
+  height: 78px;
+}
+
+.ellipse13 {
+  position: absolute;
+  height: 51.28%;
+  width: 27.03%;
+  top: 0%;
+  right: 36.49%;
+  bottom: 48.72%;
+  left: 36.49%;
+  border-radius: 50%;
+  background-color: #d2d2d2;
+}
+
+.b6 {
+  position: absolute;
+  top: 11.54%;
+  left: 45.95%;
+  color: #fff;
+}
+
+.extruderStep06UnselectBtn {
+  position: relative;
+  width: 148px;
+  height: 78px;
+}
+
+.btn {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  font-size: 20px;
+  color: #d2d2d2;
+  font-family: KoPubDotum;
+}
+
+.lineIcon {
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% + 74px);
+  left: calc(50% - 817px);
+  width: 1634px;
+  height: 2px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.header {
+  align-self: stretch;
+  height: 278px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 1px;
+  box-sizing: border-box;
+  position: relative;
+  gap: 1px;
+}
+
+.bgFrame1 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  background-color: #f8f8f8;
+  border: 1px solid #c3c3c3;
+  z-index: 0;
+}
+
+.scriptLogoIcon {
+  position: relative;
+  width: 176.45px;
+  height: 84.55px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.scriptTitle1 {
+  position: relative;
+  background-color: #f3715a;
+  width: 227.68px;
+  height: 75.2px;
+  z-index: 1;
+}
+
+.info1 {
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% + 18.82px);
+  left: calc(50% - 60.65px);
+  display: inline-block;
+  width: 134.37px;
+  height: 42.76px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.info {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.div {
+  position: relative;
+  font-weight: 500;
+}
+
+.infoContent {
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
+  color: #000;
+}
+
+.script {
+  margin: 0 !important;
+  position: absolute;
+  top: 605px;
+  left: calc(50% - 687px);
+  width: 1373.68px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
+}
+
+.btnNextIcon {
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% - 34px);
+  right: 31px;
+  width: 69px;
+  height: 69px;
+  object-fit: cover;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.btnPreIcon {
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% - 34px);
+  left: 31px;
+  width: 69px;
+  height: 69px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.content {
+  align-self: stretch;
+  height: 798px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: 10px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.extruderWholeResponsive {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 1080px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 60px;
+  color: #000;
+  font-family: 'Gmarket Sans TTF';
+}
+
+/* 라인 */
+.line {
+  position: absolute;
+  top: calc(50% - 16px);
+  left: calc(50% - 765.5px);
+  width: 1556px;
+  height: 0px;
+}
+
+.line1 {
+  position: absolute;
+  top: calc(50% - 2.5px);
+  left: calc(50% - 780.5px);
+  border-top: 5px dashed #d2d2d2;
+  box-sizing: border-box;
+  width: 231px;
+  height: 5px;
+}
+
+.line2 {
+  position: absolute;
+  top: calc(50% - 2.5px);
+  left: calc(50% - 513.5px);
+  border-top: 5px dashed #d2d2d2;
+  box-sizing: border-box;
+  width: 231px;
+  height: 5px;
+}
+
+.line3 {
+  position: absolute;
+  top: calc(50% - 2.5px);
+  left: calc(50% - 247.5px);
+  border-top: 5px dashed #d2d2d2;
+  box-sizing: border-box;
+  width: 231px;
+  height: 5px;
+}
+
+.line4 {
+  position: absolute;
+  top: calc(50% - 2.5px);
+  left: calc(50% + 18.5px);
+  border-top: 5px dashed #d2d2d2;
+  box-sizing: border-box;
+  width: 232px;
+  height: 5px;
+}
+
+.line5 {
+  position: absolute;
+  top: calc(50% - 2.5px);
+  left: calc(50% + 283.5px);
+  border-top: 5px dashed #d2d2d2;
+  box-sizing: border-box;
+  width: 232px;
+  height: 5px;
+}
+
+.line6 {
+  position: absolute;
+  top: calc(50% - 2.5px);
+  left: calc(50% + 548.5px);
+  border-top: 5px dashed #d2d2d2;
+  box-sizing: border-box;
+  width: 232px;
+  height: 5px;
+}
