@@ -4,6 +4,7 @@ import styles from './index.module.css'
 import Image from 'next/image'
 import { useState } from 'react'
 import ExtruderMainScene from '../components/ExtruderMainScene'
+import ExtruderMinimapScene from '../components/ExtruderMinimapScene'
 
 const InfoContent = ({ activeStep }) => {
   const contents = [
@@ -242,7 +243,8 @@ const Page = () => {
 
         <div className={styles.content}>
           <div className={styles.threebg}>
-            {/* <ExtruderMainScene activeStep={activeStep} /> */}
+            <ExtruderMainScene activeStep={activeStep} />
+            <ExtruderMinimapScene activeStep={activeStep} />
           </div>
           <div className={styles.script}>
             <div className={styles.info}>

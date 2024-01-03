@@ -16,8 +16,8 @@ const ExtruderMinimapScene = ({ activeStep }) => {
         width: '336px',
         height: '195px',
         position: 'absolute',
-        left: '1461px',
-        top: '460px',
+        bottom: '15%',
+        right: '14%',
       }} // 스타일 지정
     >
       <directionalLight position={[50, 170, 370]} intensity={0.5} />
