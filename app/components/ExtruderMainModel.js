@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { useFBX, useGLTF } from '@react-three/drei'
+import { useFBX } from '@react-three/drei'
 import { Select } from '@react-three/postprocessing'
 import extruderInfo from '../../db/extruder-model.json'
 import { useEffect, useState } from 'react'
@@ -7,7 +7,6 @@ import { useFrame } from '@react-three/fiber'
 
 const ExtruderMainModel = ({ url, activeStep }) => {
   const fbx = useFBX(url)
-  useFBX.preload(url)
 
   const info = useState(extruderInfo)[0]
   const mixer = new THREE.AnimationMixer(fbx)
@@ -90,7 +89,9 @@ const ExtruderMainModel = ({ url, activeStep }) => {
   }, [activeStep])
 
   useFrame((state, delta) => {
-    mixer.update(delta)
+    if (fbx) {
+      mixer.update(delta)
+    }
   })
 
   return (
@@ -99,8 +100,6 @@ const ExtruderMainModel = ({ url, activeStep }) => {
       {/* 2번 호퍼 */}
       <Select enabled={activeStep === 2}>
         <primitive object={getObjectByChildName('Brep834')} />
-        <primitive object={getObjectByChildName('Brep835')} />
-        <primitive object={getObjectByChildName('Brep788')} />
       </Select>
       {/* 3번 스크류 */}
       <Select enabled={activeStep === 3}>

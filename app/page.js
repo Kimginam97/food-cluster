@@ -1,8 +1,14 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './index.module.css'
+import { useFBX } from '@react-three/drei'
 
 export default function Page() {
+  useFBX.preload('/food-cluster/models/Extruder_test_mini.fbx')
+  useFBX.preload('/food-cluster/models/Extruder_test.fbx')
+  useFBX.preload('/food-cluster/models/PETLINE.fbx')
+  useFBX.preload('/food-cluster/models/PETLINE_mini.fbx')
   return (
     <>
       <div className={styles.mainFrame}>

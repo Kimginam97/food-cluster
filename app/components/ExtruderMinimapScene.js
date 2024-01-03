@@ -40,7 +40,7 @@ const ExtruderMinimapScene = ({ activeStep }) => {
           />
         </EffectComposer>
         <ExtruderMinimapModel
-          url="/food-cluster/models/injection-molding-minimap.fbx"
+          url="/food-cluster/models/Extruder_test_mini.fbx"
           activeStep={activeStep}
         />
       </Selection>

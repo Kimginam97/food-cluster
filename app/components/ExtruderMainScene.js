@@ -4,7 +4,6 @@ import { Canvas } from '@react-three/fiber'
 import { EffectComposer, Outline, Selection } from '@react-three/postprocessing'
 import ExtruderMainModel from './ExtruderMainModel'
 import ExtruderCameraControl from './ExtruderCameraControl'
-import ExtruderTestModel from './ExtruderTestModel'
 
 const ExtruderMainScene = ({ activeStep }) => {
   return (
@@ -28,12 +27,10 @@ const ExtruderMainScene = ({ activeStep }) => {
         </EffectComposer>
 
         <ExtruderMainModel
-          url="/food-cluster/models/EXTRUDER.fbx"
+          url="/food-cluster/models/Extruder_test.fbx"
           activeStep={activeStep}
         />
       </Selection>
-
-      {/* <ExtruderTestModel /> */}
       <ExtruderCameraControl activeStep={activeStep} />
     </Canvas>
   )
