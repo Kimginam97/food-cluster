@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { useFBX } from '@react-three/drei'
+import { useFBX, useGLTF } from '@react-three/drei'
 import { Select } from '@react-three/postprocessing'
 import extruderInfo from '../../db/extruder-model.json'
 import { useEffect, useState } from 'react'
@@ -96,31 +96,26 @@ const ExtruderMainModel = ({ url, activeStep }) => {
   return (
     <>
       <primitive object={fbx} />
-      {/* 1번 컨트롤 패널 */}
-      <Select enabled={activeStep === 1}>
-        <primitive object={getObjectByChildName('Brep038')} />
-        <primitive object={getObjectByChildName('Brep009')} />
-        <primitive object={getObjectByChildName('Brep010')} />
-      </Select>
       {/* 2번 호퍼 */}
       <Select enabled={activeStep === 2}>
-        <primitive object={getObjectByChildName('Brep782')} />
+        <primitive object={getObjectByChildName('Brep834')} />
+        <primitive object={getObjectByChildName('Brep835')} />
+        <primitive object={getObjectByChildName('Brep788')} />
       </Select>
       {/* 3번 스크류 */}
       <Select enabled={activeStep === 3}>
         <primitive object={getObjectByChildName('Brep1383')} />
-        <primitive object={getObjectByChildName('Brep065')} />
-        <primitive object={getObjectByChildName('Brep066')} />
       </Select>
       {/* 4번 성형다이 */}
       <Select enabled={activeStep === 4}>
-        <primitive object={getObjectByChildName('Brep056')} />
-        <primitive object={getObjectByChildName('Brep054')} />
+        <primitive object={getObjectByChildName('Brep1385')} />
+        <primitive object={getObjectByChildName('Brep066')} />
+        <primitive object={getObjectByChildName('Brep1391')} />
       </Select>
       {/* 5번 냉각다이 */}
-      <Select enabled={activeStep === 5}>
+      {/* <Select enabled={activeStep === 5}>
         <primitive object={getObjectByChildName('Brep1219')} />
-      </Select>
+      </Select> */}
     </>
   )
 }
