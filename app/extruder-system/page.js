@@ -1,7 +1,7 @@
 'use client'
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from './extruder.module.css'
+import Image from 'next/image'
 import { useState } from 'react'
 import ExtruderMainScene from '../components/ExtruderMainScene'
 import ExtruderMinimapScene from '../components/ExtruderMinimapScene'
@@ -17,10 +17,10 @@ const InfoContent = ({ activeStep }) => {
     '압출성형 공정을 거쳐 식물성 조직 단백질이 제조됩니다.',
   ]
 
-  return <div className={styles.scriptContent}>{contents[activeStep]}</div>
+  return <div className={styles.infoContent}>{contents[activeStep]}</div>
 }
 
-export default function Page() {
+const Page = () => {
   const [activeStep, setActiveStep] = useState(0)
 
   const handleStepClick = (step) => {
@@ -35,247 +35,311 @@ export default function Page() {
     setActiveStep((prevStep) => Math.min(prevStep + 1, 6))
   }
   return (
-    <div className={styles.extruderWholeFinal}>
-      <div className={styles.logo}>
-        <Link href="/">
-          <Image
-            className={styles.logoIcon}
-            src="/food-cluster/ui/extruder/logo.png"
-            alt="logo"
-            width={131}
-            height={75}
-          />
-        </Link>
-        <Link href="/">
-          <Image
-            className={styles.foodpolisIcon}
-            src="/food-cluster/ui/extruder/foodpolis.png"
-            alt="foodpolis"
-            width={217}
-            height={32}
-          />
-        </Link>
-      </div>
+    <>
+      <main className={styles.extruderWholeResponsive}>
+        <header className={styles.header}>
+          <nav className={styles.navbar}>
+            <div className={styles.logo}>
+              <Link href="/">
+                <Image
+                  className={styles.logoIcon}
+                  src="/food-cluster/ui/extruder/logo.png"
+                  alt="logo"
+                  width={131}
+                  height={75}
+                />
+              </Link>
+              <Link href="/">
+                <Image
+                  className={styles.foodpolisIcon}
+                  src="/food-cluster/ui/extruder/foodpolis.png"
+                  alt="foodpolis"
+                  width={217}
+                  height={32}
+                />
+              </Link>
+            </div>
+            <div className={styles.titleMainExt}>
+              <b className={styles.b}>압출성형기</b>
+              <div className={styles.extruderSystem}>Extruder System</div>
+            </div>
+            <div className={styles.titleSubPet}>
+              <Link href="/pet-line">
+                <Image
+                  className={styles.imgNextOrangeIcon}
+                  src="/food-cluster/ui/extruder/img-next-orange.png"
+                  alt="img-next-orange"
+                  width={53}
+                  height={53}
+                />
+              </Link>
+              <div className={styles.petLine}>
+                <b className={styles.b}>PET 라인</b>
+                <div className={styles.petLine1}>PET Line</div>
+              </div>
+            </div>
+          </nav>
 
-      <div className={styles.titleMainExt}>
-        <b className={styles.b6}>압출성형기</b>
-        <div className={styles.extruderSystem}>Extruder System</div>
-      </div>
+          <div className={styles.divLine1} />
 
-      <div className={styles.titleSubPet}>
-        <b className={styles.pet}>PET 라인</b>
-        <div className={styles.petLine}>PET Line</div>
-        <Link href="/pet-line">
+          <div className={styles.btn}>
+            <div className={styles.extruderStepBtn}>
+              <div
+                className={
+                  activeStep >= 1 ? styles.rightLineActive : styles.rightLine
+                }
+              />
+              <div className={styles.extruderStepSelectBtn}>
+                <div
+                  className={
+                    activeStep >= 0 ? styles.ellipseActive : styles.ellipse
+                  }
+                  onClick={() => handleStepClick(0)}
+                />
+                <div className={styles.btnContainer}>
+                  <b>{`WHOLE | `}</b>
+                  <span className={styles.span}>전체공정보기</span>
+                </div>
+                <b className={styles.w} onClick={() => handleStepClick(0)}>
+                  W
+                </b>
+              </div>
+            </div>
+            <div className={styles.extruderStepBtn}>
+              <div
+                className={
+                  activeStep >= 1 ? styles.leftLineActive : styles.leftLine
+                }
+              />
+              <div
+                className={
+                  activeStep >= 2 ? styles.rightLineActive : styles.rightLine
+                }
+              />
+              <div
+                className={
+                  activeStep >= 1
+                    ? styles.extruderStepSelectBtn
+                    : styles.extruderStepUnselectBtn
+                }
+              >
+                <div
+                  className={
+                    activeStep >= 1 ? styles.ellipseActive : styles.ellipse
+                  }
+                  onClick={() => handleStepClick(1)}
+                />
+                <div className={styles.btnContainer}>
+                  <b>{`STEP 01 | `}</b>
+                  <span className={styles.span}>조작 패널 설정</span>
+                </div>
+                <b className={styles.extB} onClick={() => handleStepClick(1)}>
+                  1
+                </b>
+              </div>
+            </div>
+            <div className={styles.extruderStepBtn}>
+              <div
+                className={
+                  activeStep >= 2 ? styles.leftLineActive : styles.leftLine
+                }
+              />
+              <div
+                className={
+                  activeStep >= 3 ? styles.rightLineActive : styles.rightLine
+                }
+              />
+              <div
+                className={
+                  activeStep >= 2
+                    ? styles.extruderStepSelectBtn
+                    : styles.extruderStepUnselectBtn
+                }
+              >
+                <div
+                  className={
+                    activeStep >= 2 ? styles.ellipseActive : styles.ellipse
+                  }
+                  onClick={() => handleStepClick(2)}
+                />
+                <div className={styles.btnContainer}>
+                  <b>{`STEP 02 | `}</b>
+                  <span className={styles.span}>호퍼 원료 투입</span>
+                </div>
+                <b className={styles.extB} onClick={() => handleStepClick(2)}>
+                  2
+                </b>
+              </div>
+            </div>
+            <div className={styles.extruderStepBtn}>
+              <div
+                className={
+                  activeStep >= 3 ? styles.leftLineActive : styles.leftLine
+                }
+              />
+              <div
+                className={
+                  activeStep >= 4 ? styles.rightLineActive : styles.rightLine
+                }
+              />
+              <div
+                className={
+                  activeStep >= 3
+                    ? styles.extruderStepSelectBtn
+                    : styles.extruderStepUnselectBtn
+                }
+              >
+                <div
+                  className={
+                    activeStep >= 3 ? styles.ellipseActive : styles.ellipse
+                  }
+                  onClick={() => handleStepClick(3)}
+                />
+                <div className={styles.btnContainer}>
+                  <b>{`STEP 03 | `}</b>
+                  <span className={styles.span}>스크류 동작</span>
+                </div>
+                <b className={styles.extB} onClick={() => handleStepClick(3)}>
+                  3
+                </b>
+              </div>
+            </div>
+            <div className={styles.extruderStepBtn}>
+              <div
+                className={
+                  activeStep >= 4 ? styles.leftLineActive : styles.leftLine
+                }
+              />
+              <div
+                className={
+                  activeStep >= 5 ? styles.rightLineActive : styles.rightLine
+                }
+              />
+              <div
+                className={
+                  activeStep >= 4
+                    ? styles.extruderStepSelectBtn
+                    : styles.extruderStepUnselectBtn
+                }
+              >
+                <div
+                  className={
+                    activeStep >= 4 ? styles.ellipseActive : styles.ellipse
+                  }
+                  onClick={() => handleStepClick(4)}
+                />
+                <div className={styles.btnContainer}>
+                  <b>{`STEP 04 | `}</b>
+                  <span className={styles.span}>성형다이 설치</span>
+                </div>
+                <b className={styles.extB} onClick={() => handleStepClick(4)}>
+                  4
+                </b>
+              </div>
+            </div>
+            <div className={styles.extruderStepBtn}>
+              <div
+                className={
+                  activeStep >= 5 ? styles.leftLineActive : styles.leftLine
+                }
+              />
+              <div
+                className={
+                  activeStep >= 6 ? styles.rightLineActive : styles.rightLine
+                }
+              />
+              <div
+                className={
+                  activeStep >= 5
+                    ? styles.extruderStepSelectBtn
+                    : styles.extruderStepUnselectBtn
+                }
+              >
+                <div
+                  className={
+                    activeStep >= 5 ? styles.ellipseActive : styles.ellipse
+                  }
+                  onClick={() => handleStepClick(5)}
+                />
+                <div className={styles.btnContainer}>
+                  <b>{`STEP 05 | `}</b>
+                  <span className={styles.span}>냉각다이 고정</span>
+                </div>
+                <b className={styles.extB} onClick={() => handleStepClick(5)}>
+                  5
+                </b>
+              </div>
+            </div>
+            <div className={styles.extruderStepBtn}>
+              <div
+                className={
+                  activeStep >= 6 ? styles.leftLineActive : styles.leftLine
+                }
+              />
+              <div
+                className={
+                  activeStep >= 6
+                    ? styles.extruderStepSelectBtn
+                    : styles.extruderStepUnselectBtn
+                }
+              >
+                <div
+                  className={
+                    activeStep >= 6 ? styles.ellipseActive : styles.ellipse
+                  }
+                  onClick={() => handleStepClick(6)}
+                />
+                <div className={styles.btnContainer}>
+                  <b>{`STEP 06 | `}</b>
+                  <span className={styles.span}>결과물</span>
+                </div>
+                <b className={styles.extB} onClick={() => handleStepClick(6)}>
+                  6
+                </b>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div className={styles.content}>
+          <div className={styles.threebg}>
+            <ExtruderMainScene activeStep={activeStep} />
+            <ExtruderMinimapScene activeStep={activeStep} />
+          </div>
+          <div className={styles.script}>
+            <div className={styles.info}>
+              <Image
+                className={styles.scriptLogoIcon}
+                src="/food-cluster/ui/extruder/script-logo.png"
+                alt="script-logo"
+                width={176}
+                height={85}
+              />
+              <div className={styles.scriptTitle1} />
+              <b className={styles.info1}>INFO</b>
+            </div>
+            <InfoContent activeStep={activeStep} />
+          </div>
           <Image
-            className={styles.imgNextOrangeIcon}
-            src="/food-cluster/ui/extruder/img-next-orange.png"
+            className={styles.btnPreIcon}
+            src="/food-cluster/ui/extruder/btn-pre.png"
             alt="img-next-orange"
-            width={53}
-            height={53}
+            width={69}
+            height={69}
+            onClick={handlePreviousClick}
           />
-        </Link>
-      </div>
-
-      <div className={styles.navbarLine} />
-
-      <div className={styles.btnStep}>
-        <div className={styles.line}>
-          <div
-            className={`${styles.line1} ${
-              activeStep >= 1 ? styles.lineActive : ''
-            }`}
-          />
-          <div
-            className={`${styles.line2} ${
-              activeStep >= 2 ? styles.lineActive : ''
-            }`}
-          />
-          <div
-            className={`${styles.line3} ${
-              activeStep >= 3 ? styles.lineActive : ''
-            }`}
-          />
-          <div
-            className={`${styles.line4} ${
-              activeStep >= 4 ? styles.lineActive : ''
-            }`}
-          />
-          <div
-            className={`${styles.line5} ${
-              activeStep >= 5 ? styles.lineActive : ''
-            }`}
-          />
-          <div
-            className={`${styles.line6} ${
-              activeStep >= 6 ? styles.lineActive : ''
-            }`}
+          <Image
+            className={styles.btnNextIcon}
+            src="/food-cluster/ui/extruder/btn-next.png"
+            alt="img-next-orange"
+            width={69}
+            height={69}
+            onClick={handleNextClick}
           />
         </div>
-
-        <div className={styles.extruderStep00selectBtn}>
-          <div
-            className={styles.ellipseActive}
-            onClick={() => handleStepClick(0)}
-          />
-          <div className={styles.step01Container}>
-            <b>{`WHOLE | `}</b>
-            <span className={styles.span}>전체공정보기</span>
-          </div>
-          <b className={styles.b0} onClick={() => handleStepClick(0)}>
-            W
-          </b>
-        </div>
-        <div
-          className={
-            activeStep >= 1
-              ? styles.extruderStep01selectBtn
-              : styles.extruderStep01UnselectBtn
-          }
-        >
-          <div
-            className={activeStep >= 1 ? styles.ellipseActive : styles.ellipse}
-            onClick={() => handleStepClick(1)}
-          />
-          <div className={styles.step01Container}>
-            <b>{`STEP 01 | `}</b>
-            <span className={styles.span}>조작 패널 설정</span>
-          </div>
-          <b className={styles.b} onClick={() => handleStepClick(1)}>
-            1
-          </b>
-        </div>
-        <div
-          className={
-            activeStep >= 2
-              ? styles.extruderStep02selectBtn
-              : styles.extruderStep02UnselectBtn
-          }
-        >
-          <div
-            className={activeStep >= 2 ? styles.ellipseActive : styles.ellipse}
-            onClick={() => handleStepClick(2)}
-          />
-          <div className={styles.step01Container}>
-            <b>{`STEP 02 | `}</b>
-            <span className={styles.span}>호퍼 원료 투입</span>
-          </div>
-          <b className={styles.b} onClick={() => handleStepClick(2)}>
-            2
-          </b>
-        </div>
-        <div
-          className={
-            activeStep >= 3
-              ? styles.extruderStep03selectBtn
-              : styles.extruderStep03UnselectBtn
-          }
-        >
-          <div
-            className={activeStep >= 3 ? styles.ellipseActive : styles.ellipse}
-            onClick={() => handleStepClick(3)}
-          />
-          <div className={styles.step01Container}>
-            <b>{`STEP 03 | `}</b>
-            <span className={styles.span}>스크류 동작</span>
-          </div>
-          <b className={styles.b} onClick={() => handleStepClick(3)}>
-            3
-          </b>
-        </div>
-        <div
-          className={
-            activeStep >= 4
-              ? styles.extruderStep04selectBtn
-              : styles.extruderStep04UnselectBtn
-          }
-        >
-          <div
-            className={activeStep >= 4 ? styles.ellipseActive : styles.ellipse}
-            onClick={() => handleStepClick(4)}
-          />
-          <div className={styles.step01Container}>
-            <b>{`STEP 04 | `}</b>
-            <span className={styles.span}>성형다이 설치</span>
-          </div>
-          <b className={styles.b} onClick={() => handleStepClick(4)}>
-            4
-          </b>
-        </div>
-        <div
-          className={
-            activeStep >= 5
-              ? styles.extruderStep05selectBtn
-              : styles.extruderStep05UnselectBtn
-          }
-        >
-          <div
-            className={activeStep >= 5 ? styles.ellipseActive : styles.ellipse}
-            onClick={() => handleStepClick(5)}
-          />
-          <div className={styles.step01Container}>
-            <b>{`STEP 05 | `}</b>
-            <span className={styles.span}>냉각다이 고정</span>
-          </div>
-          <b className={styles.b} onClick={() => handleStepClick(5)}>
-            5
-          </b>
-        </div>
-        <div
-          className={
-            activeStep >= 6
-              ? styles.extruderStep06selectBtn
-              : styles.extruderStep06UnselectBtn
-          }
-        >
-          <div
-            className={activeStep >= 6 ? styles.ellipseActive : styles.ellipse}
-            onClick={() => handleStepClick(6)}
-          />
-          <div className={styles.step01Container}>
-            <b>{`STEP 06 | `}</b>
-            <span className={styles.span}>결과물</span>
-          </div>
-          <b className={styles.b} onClick={() => handleStepClick(6)}>
-            6
-          </b>
-        </div>
-      </div>
-
-      <div className={styles.threeBg}>
-        <ExtruderMainScene activeStep={activeStep} />
-        {/* <ExtruderMinimapScene activeStep={activeStep} /> */}
-      </div>
-
-      <Image
-        className={styles.btnPreIcon}
-        src="/food-cluster/ui/extruder/btn-pre.png"
-        alt="img-next-orange"
-        width={69}
-        height={69}
-        onClick={handlePreviousClick}
-      />
-      <Image
-        className={styles.btnNextIcon}
-        src="/food-cluster/ui/extruder/btn-next.png"
-        alt="img-next-orange"
-        width={69}
-        height={69}
-        onClick={handleNextClick}
-      />
-
-      <div className={styles.script}>
-        <div className={styles.scriptBg} />
-        <div className={styles.scriptTitle} />
-        <b className={styles.info}>INFO</b>
-        <InfoContent activeStep={activeStep} />
-        <Image
-          className={styles.scriptLogoIcon}
-          src="/food-cluster/ui/extruder/script-logo.png"
-          alt="script-logo"
-          width={176}
-          height={85}
-        />
-      </div>
-    </div>
+      </main>
+    </>
   )
 }
+
+export default Page

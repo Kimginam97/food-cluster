@@ -1,204 +1,202 @@
-/* 메인 화면 */
-.extruderWholeFinal {
+.extruderWholeResponsive {
   position: relative;
   background-color: #fff;
   width: 100%;
   height: 1080px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
-  font-size: 30px;
-  color: #fff;
+  font-size: 60px;
+  color: #000;
   font-family: 'Gmarket Sans TTF';
 }
 
-/* 로고 */
+.header {
+  align-self: stretch;
+  height: 278px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 1px;
+  box-sizing: border-box;
+  position: relative;
+  gap: 1px;
+}
+
+.navbar {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px;
+  z-index: 0;
+}
+
 .logo {
-  position: absolute;
-  top: calc(50% - 498px);
-  left: calc(50% - 897px);
-  width: 320px;
   height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
 .logoIcon {
-  position: absolute;
-  top: calc(50% - 37.5px);
-  left: calc(50% - 160px);
+  position: relative;
   width: 131px;
   height: 75px;
   object-fit: cover;
 }
 
 .foodpolisIcon {
-  position: absolute;
-  top: calc(50% - 13.5px);
-  left: calc(50% - 57px);
+  position: relative;
   width: 217px;
   height: 32px;
   object-fit: cover;
 }
 
-/* 압출성형기 */
 .titleMainExt {
-  position: absolute;
-  top: calc(50% - 498px);
-  left: calc(50% - 144px);
-  width: 300px;
   height: 111px;
-  font-size: 60px;
-  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 13px;
 }
 
-.b6 {
-  position: absolute;
-  top: calc(50% - 55.5px);
-  left: calc(50% - 144.5px);
-  cursor: pointer;
+.b {
+  position: relative;
 }
 
 .extruderSystem {
-  position: absolute;
-  top: calc(50% + 26.5px);
-  left: calc(50% - 113.5px);
+  position: relative;
   font-size: 25px;
   font-weight: 500;
   color: rgba(116, 116, 116, 0.5);
 }
 
-/* PET 라인 */
 .titleSubPet {
-  position: absolute;
-  top: calc(50% - 475px);
-  left: calc(50% + 405px);
-  width: 375px;
-  height: 74px;
+  width: 362px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
   font-size: 35px;
   color: rgba(0, 0, 0, 0.4);
 }
 
-.pet {
-  position: absolute;
-  top: calc(50% - 37px);
-  left: calc(50% + 29.5px);
-}
-
-.petLine {
-  position: absolute;
-  top: calc(50% + 14px);
-  left: calc(50% + 60.5px);
-  font-size: 20px;
-  font-weight: 500;
-  color: rgba(116, 116, 116, 0.4);
-}
-
 .imgNextOrangeIcon {
-  position: absolute;
-  top: calc(50% - 31px);
-  left: calc(50% - 185.5px);
+  position: relative;
   width: 53px;
   height: 53px;
   object-fit: contain;
   cursor: pointer;
 }
 
-/* navbar 라인 */
-.navbarLine {
-  position: absolute;
-  top: calc(50% - 362px);
-  left: calc(50% - 961px);
-  border-top: 2px solid #d9d9d9;
-  box-sizing: border-box;
-  width: 1922px;
-  height: 2px;
+.petLine {
+  width: 179px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Step 버튼 */
-.btnStep {
-  position: absolute;
-  top: calc(50% - 350px);
-  left: calc(50% - 883px);
-  width: 1767px;
-  height: 78px;
+
+.petLine1 {
+  position: relative;
   font-size: 20px;
-  color: #d2d2d2;
+  font-weight: 500;
+  color: rgba(116, 116, 116, 0.4);
+}
+
+.divLine1 {
+  align-self: stretch;
+  position: relative;
+  border-top: 2px solid #d9d9d9;
+  box-sizing: border-box;
+  height: 2px;
+  z-index: 1;
+}
+
+.btn {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  font-size: 20px;
   font-family: KoPubDotum;
 }
 
-/* 라인 */
-.line {
-  position: absolute;
-  top: calc(50% - 16px);
-  left: calc(50% - 765.5px);
-  width: 1556px;
-  height: 0px;
+.extruderStepBtn {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px 10px 0px;
 }
 
-.line1 {
+.leftLine {
   position: absolute;
-  top: calc(50% - 2.5px);
-  left: calc(50% - 780.5px);
+  top: 30%;
+  transform: translateX(-50%);
   border-top: 5px dashed #d2d2d2;
-  box-sizing: border-box;
-  width: 231px;
-  height: 5px;
+  width: 50%;
 }
 
-.line2 {
+.leftLineActive {
   position: absolute;
-  top: calc(50% - 2.5px);
-  left: calc(50% - 513.5px);
-  border-top: 5px dashed #d2d2d2;
-  box-sizing: border-box;
-  width: 231px;
-  height: 5px;
-}
-
-.line3 {
-  position: absolute;
-  top: calc(50% - 2.5px);
-  left: calc(50% - 247.5px);
-  border-top: 5px dashed #d2d2d2;
-  box-sizing: border-box;
-  width: 231px;
-  height: 5px;
-}
-
-.line4 {
-  position: absolute;
-  top: calc(50% - 2.5px);
-  left: calc(50% + 18.5px);
-  border-top: 5px dashed #d2d2d2;
-  box-sizing: border-box;
-  width: 232px;
-  height: 5px;
-}
-
-.line5 {
-  position: absolute;
-  top: calc(50% - 2.5px);
-  left: calc(50% + 283.5px);
-  border-top: 5px dashed #d2d2d2;
-  box-sizing: border-box;
-  width: 232px;
-  height: 5px;
-}
-
-.line6 {
-  position: absolute;
-  top: calc(50% - 2.5px);
-  left: calc(50% + 548.5px);
-  border-top: 5px dashed #d2d2d2;
-  box-sizing: border-box;
-  width: 232px;
-  height: 5px;
-}
-
-.lineActive {
+  top: 30%;
+  transform: translateX(-50%);
   border-top: 5px dashed #f3715a;
+  width: 50%;
 }
 
-/* 버튼 공통 */
+.rightLine {
+  position: absolute;
+  left: 75%;
+  top: 30%;
+  transform: translateX(-50%);
+  border-top: 5px dashed #d2d2d2;
+  width: 45%;
+}
+
+.rightLineActive {
+  position: absolute;
+  left: 75%;
+  top: 30%;
+  transform: translateX(-50%);
+  border-top: 5px dashed #f3715a;
+  width: 45%;
+}
+
+.extruderStepUnselectBtn {
+  position: relative;
+  width: 211px;
+  height: 78px;
+  color: #d2d2d2;
+}
+
+.extruderStepSelectBtn {
+  position: relative;
+  width: 211px;
+  height: 78px;
+  color: #f3715a;
+}
+
 .ellipse {
   position: absolute;
   height: 51.28%;
@@ -225,7 +223,7 @@
   cursor: pointer;
 }
 
-.step01Container {
+.btnContainer {
   position: absolute;
   top: 71.79%;
   left: 0%;
@@ -235,25 +233,7 @@
   font-weight: 500;
 }
 
-.b {
-  position: absolute;
-  top: 11.54%;
-  left: 46.92%;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* W 버튼 */
-.extruderStep00selectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% - 883.5px);
-  width: 197px;
-  height: 78px;
-  color: #f3715a;
-}
-
-.b0 {
+.w {
   position: absolute;
   top: 11.54%;
   left: 44.92%;
@@ -261,199 +241,121 @@
   cursor: pointer;
 }
 
-/* 1 버튼 */
-.extruderStep01UnselectBtn {
+.extB {
   position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% - 624.5px);
-  width: 211px;
-  height: 78px;
+  top: 11.54%;
+  left: 46.81%;
+  color: #fff;
+  cursor: pointer;
 }
 
-.extruderStep01selectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% - 624.5px);
-  width: 211px;
-  height: 78px;
-  color: #f3715a;
+.content {
+  align-self: stretch;
+  height: 798px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: 10px;
+  font-size: 30px;
+  color: #fff;
 }
 
-/* 2 버튼 */
-.extruderStep02UnselectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% - 358.5px);
-  width: 211px;
-  height: 78px;
-}
-
-.extruderStep02selectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% - 358.5px);
-  width: 211px;
-  height: 78px;
-  color: #f3715a;
-}
-
-/* 3 버튼 */
-.extruderStep03UnselectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% - 81.5px);
-  width: 188px;
-  height: 78px;
-}
-
-.extruderStep03selectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% - 81.5px);
-  width: 188px;
-  height: 78px;
-  color: #f3715a;
-}
-
-/* 4 버튼 */
-.extruderStep04UnselectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% + 176.5px);
-  width: 206px;
-  height: 78px;
-}
-
-.extruderStep04selectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% + 176.5px);
-  width: 206px;
-  height: 78px;
-  color: #f3715a;
-}
-
-/* 5 버튼 */
-.extruderStep05UnselectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% + 441.5px);
-  width: 206px;
-  height: 78px;
-}
-
-.extruderStep05selectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% + 441.5px);
-  width: 206px;
-  height: 78px;
-  color: #f3715a;
-}
-
-/* 6 버튼 */
-.extruderStep06UnselectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% + 705.5px);
-  width: 206px;
-  height: 78px;
-}
-
-.extruderStep06selectBtn {
-  position: absolute;
-  top: calc(50% - 39px);
-  left: calc(50% + 705.5px);
-  width: 206px;
-  height: 78px;
-  color: #f3715a;
-}
-
-/* 3D 백그라운드 */
-.threeBg {
-  position: absolute;
-  top: calc(50% - 258px);
-  left: calc(50% - 960px);
+.threebg {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
   background-color: #f8f8f8;
   border: 1px solid #c3c3c3;
-  box-sizing: border-box;
-  width: 1920px;
-  height: 798px;
+  z-index: 0;
 }
 
-/* 이전, 다음 버튼 */
-.btnPreIcon {
+.scriptLogoIcon {
+  position: relative;
+  width: 176.45px;
+  height: 84.55px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.scriptTitle1 {
+  position: relative;
+  background-color: #f3715a;
+  width: 227.68px;
+  height: 75.2px;
+  z-index: 1;
+}
+
+.info1 {
   position: absolute;
-  top: calc(50% + 107px);
-  left: calc(50% - 929px);
-  width: 69px;
-  height: 69px;
-  object-fit: contain;
-  cursor: pointer;
+  margin: 0 !important;
+  top: calc(50% + 18.82px);
+  left: calc(50% - 60.65px);
+  display: inline-block;
+  width: 134.37px;
+  height: 42.76px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.info {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.infoContent {
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
+  color: #000;
+  font-weight: 500;
+  width: 1416.36px;
+  height: 80px;
+}
+
+.script {
+  margin: 0 !important;
+  position: absolute;
+  top: 605px;
+  left: calc(50% - 687px);
+  width: 1373.68px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
 }
 
 .btnNextIcon {
   position: absolute;
-  top: calc(50% + 107px);
-  left: calc(50% + 860px);
+  margin: 0 !important;
+  top: calc(50% - 34px);
+  right: 31px;
   width: 69px;
   height: 69px;
   object-fit: cover;
   cursor: pointer;
+  z-index: 2;
 }
 
-/* 스크립트 */
-.script {
+.btnPreIcon {
   position: absolute;
-  top: calc(50% + 347px);
-  left: calc(50% - 837px);
-  width: 1674px;
-  height: 153.2px;
-}
-
-.scriptBg {
-  position: absolute;
-  top: calc(50% + 1.4px);
-  left: calc(50% - 609px);
-  background-color: #fff;
-  width: 1446px;
-  height: 75px;
-}
-
-.scriptTitle {
-  position: absolute;
-  top: calc(50% + 1.4px);
-  left: calc(50% - 837px);
-  background-color: #f3715a;
-  width: 227.68px;
-  height: 75.2px;
-}
-
-.info {
-  position: absolute;
-  top: calc(50% + 19.1px);
-  left: calc(50% - 783.81px);
-  display: inline-block;
-  width: 134.37px;
-  height: 42.76px;
-}
-
-.scriptLogoIcon {
-  position: absolute;
-  top: calc(50% - 76.6px);
-  left: calc(50% - 811px);
-  width: 176.45px;
-  height: 84.55px;
-  object-fit: cover;
-}
-
-.scriptContent {
-  position: absolute;
-  top: calc(50% + 21.4px);
-  left: calc(50% - 594px);
-  font-weight: 500;
-  color: #000;
-  display: inline-block;
-  width: 1416.36px;
-  height: 35.09px;
+  margin: 0 !important;
+  top: calc(50% - 34px);
+  left: 31px;
+  width: 69px;
+  height: 69px;
+  object-fit: contain;
+  cursor: pointer;
+  z-index: 3;
 }
