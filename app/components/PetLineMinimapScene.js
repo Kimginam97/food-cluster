@@ -1,34 +1,29 @@
 'use client'
 
 import { Canvas } from '@react-three/fiber'
-import { PerspectiveCamera, CameraControls } from '@react-three/drei'
 
 import { EffectComposer, Outline, Selection } from '@react-three/postprocessing'
+import PetLineMinimapCameraControl from './PetLineMinimapCameraControl'
 import PetLineMinimapModel from './PetLineMinimapModel'
 
-const PetLineMinimapScene = ({ activeStep }) => {
+const PetLineMinimapScene = ({}) => {
   return (
     <Canvas
       className=" bg-white"
       gl={{ logarithmicDepthBuffer: true, antialias: false }}
       frameloop="demand"
       style={{
-        width: '336px',
+        width: '350px',
         height: '195px',
         position: 'absolute',
         bottom: '15%',
         right: '14%',
       }} // 스타일 지정
     >
-      <directionalLight position={[50, 170, 370]} intensity={0.5} />
-      <PerspectiveCamera
-        fov={75} // 시야각
-        near={1} // 가까운 클리핑 평면
-        far={1000} // 먼 클리핑 평면
-        position={[50, 170, 370]}
-        makeDefault
-      />
-
+      <directionalLight position={[5, 10, 7.5]} intensity={0.7} />
+      <directionalLight position={[6.7, 10, 1935]} intensity={0.7} />
+      <directionalLight position={[-65, 10, -688]} intensity={0.7} />
+      <directionalLight position={[-843, 86, 655]} intensity={0.7} />
       <Selection>
         <EffectComposer multisampling={1} autoClear={false}>
           <Outline
@@ -41,8 +36,7 @@ const PetLineMinimapScene = ({ activeStep }) => {
         </EffectComposer>
         <PetLineMinimapModel url="/food-cluster/models/PetLine_mini.fbx" />
       </Selection>
-
-      <CameraControls enabled={false} />
+      <PetLineMinimapCameraControl />
     </Canvas>
   )
 }

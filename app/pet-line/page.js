@@ -304,7 +304,7 @@ const Page = () => {
         <div className={styles.content}>
           <div className={styles.threebg}>
             <PetLineMainScene activeStep={activeStep} />
-            {/* <PetLineMinimapScene activeStep={activeStep} /> */}
+            <PetLineMinimapScene activeStep={activeStep} />
           </div>
           <div className={styles.script}>
             <div className={styles.info}>
