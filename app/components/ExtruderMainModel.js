@@ -7,14 +7,14 @@ import { useFrame } from '@react-three/fiber'
 
 const ExtruderMainModel = ({ url, activeStep }) => {
   const fbx = useFBX(url)
-
+  useFBX.preload(url)
   const info = useState(extruderInfo)[0]
   const mixer = new THREE.AnimationMixer(fbx)
 
-  const getObjectByChildName = (childName) => {
-    const index = fbx.children.findIndex((v) => v.name === childName)
-    return index !== -1 ? fbx.children[index] : null
-  }
+  // const getObjectByChildName = (childName) => {
+  //   const index = fbx.children.findIndex((v) => v.name === childName)
+  //   return index !== -1 ? fbx.children[index] : null
+  // }
 
   const playAnimation = () => {
     // 이전 애니메이션을 모두 정지
@@ -98,19 +98,19 @@ const ExtruderMainModel = ({ url, activeStep }) => {
     <>
       <primitive object={fbx} />
       {/* 2번 호퍼 */}
-      <Select enabled={activeStep === 2}>
+      {/* <Select enabled={activeStep === 2}>
         <primitive object={getObjectByChildName('Brep834')} />
-      </Select>
+      </Select> */}
       {/* 3번 스크류 */}
-      <Select enabled={activeStep === 3}>
+      {/* <Select enabled={activeStep === 3}>
         <primitive object={getObjectByChildName('Brep1383')} />
-      </Select>
+      </Select> */}
       {/* 4번 성형다이 */}
-      <Select enabled={activeStep === 4}>
+      {/* <Select enabled={activeStep === 4}>
         <primitive object={getObjectByChildName('Brep1385')} />
         <primitive object={getObjectByChildName('Brep066')} />
         <primitive object={getObjectByChildName('Brep1391')} />
-      </Select>
+      </Select> */}
       {/* 5번 냉각다이 */}
       {/* <Select enabled={activeStep === 5}>
         <primitive object={getObjectByChildName('Brep1219')} />

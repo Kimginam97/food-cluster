@@ -69,8 +69,8 @@ const Page = () => {
                   className={styles.imgNextBlueIcon}
                   src="/food-cluster/ui/pet/img-next-blue.png"
                   alt="img-next-blue"
-                  width={53}
-                  height={53}
+                  width={33}
+                  height={33}
                 />
               </Link>
               <div className={styles.petLine}>

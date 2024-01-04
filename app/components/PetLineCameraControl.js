@@ -9,19 +9,14 @@ const PetLineCameraControl = ({ activeStep }) => {
   const cameraRef = useRef()
 
   useEffect(() => {
-    cameraRef.current.setPosition(
+    cameraRef.current.setLookAt(
       info[activeStep].position.x,
       info[activeStep].position.y,
-      info[activeStep].position.z
-    )
-    cameraRef.current.setTarget(
+      info[activeStep].position.z,
       info[activeStep].target.x,
       info[activeStep].target.y,
       info[activeStep].target.z
     )
-    cameraRef.current._camera.fov = 150
-    cameraRef.current._camera.near = 0.1
-    cameraRef.current._camera.far = 1000
   }, [activeStep])
 
   return (
