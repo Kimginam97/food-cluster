@@ -8,13 +8,13 @@ import { useFrame } from '@react-three/fiber'
 const ExtruderMainModel = ({ url, activeStep }) => {
   const fbx = useFBX(url)
   useFBX.preload(url)
-  const info = useState(extruderInfo)[0]
+
   const mixer = new THREE.AnimationMixer(fbx)
 
-  // const getObjectByChildName = (childName) => {
-  //   const index = fbx.children.findIndex((v) => v.name === childName)
-  //   return index !== -1 ? fbx.children[index] : null
-  // }
+  const getObjectByChildName = (childName) => {
+    const index = fbx.children.findIndex((v) => v.name === childName)
+    return index !== -1 ? fbx.children[index] : null
+  }
 
   const playAnimation = () => {
     // 이전 애니메이션을 모두 정지
@@ -29,7 +29,7 @@ const ExtruderMainModel = ({ url, activeStep }) => {
     }
 
     // 현재 실행할 애니메이션은 반복재생
-    info[activeStep].animations.forEach((animationName) => {
+    extruderInfo[activeStep].animations.forEach((animationName) => {
       const clip = fbx.animations.find((animationClip) =>
         animationClip.name.includes(animationName)
       )
@@ -41,7 +41,7 @@ const ExtruderMainModel = ({ url, activeStep }) => {
     })
 
     // 시작하는 시간에 지정해서 멈춰야될 애니메이션
-    info[activeStep].startTimeAnimations.forEach((animationName) => {
+    extruderInfo[activeStep].startTimeAnimations.forEach((animationName) => {
       const clip = fbx.animations.find((animationClip) =>
         animationClip.name.includes(animationName)
       )
@@ -59,7 +59,7 @@ const ExtruderMainModel = ({ url, activeStep }) => {
     })
 
     // 끝나는 시간에 지정해서 멈춰야될 애니메이션
-    info[activeStep].endTimeAnimations.forEach((animationName) => {
+    extruderInfo[activeStep].endTimeAnimations.forEach((animationName) => {
       const clip = fbx.animations.find((animationClip) =>
         animationClip.name.includes(animationName)
       )

@@ -38,7 +38,7 @@ const PetLineMinimapScene = ({}) => {
             />
           </EffectComposer>
 
-          <PetLineMinimapModel url="/food-cluster/models/PetLine_mini.fbx" />
+          <PetLineMinimapModel url="/food-cluster/models/PETLINE_mini.fbx" />
         </Selection>
         <PetLineMinimapCameraControl />
       </Suspense>

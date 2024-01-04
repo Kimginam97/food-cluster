@@ -5,17 +5,16 @@ import { useEffect, useRef, useState } from 'react'
 import petInfo from '../../db/pet-model.json'
 
 const PetLineCameraControl = ({ activeStep }) => {
-  const info = useState(petInfo)[0]
   const cameraRef = useRef()
 
   useEffect(() => {
     cameraRef.current.setLookAt(
-      info[activeStep].position.x,
-      info[activeStep].position.y,
-      info[activeStep].position.z,
-      info[activeStep].target.x,
-      info[activeStep].target.y,
-      info[activeStep].target.z
+      petInfo[activeStep].position.x,
+      petInfo[activeStep].position.y,
+      petInfo[activeStep].position.z,
+      petInfo[activeStep].target.x,
+      petInfo[activeStep].target.y,
+      petInfo[activeStep].target.z
     )
   }, [activeStep])
 

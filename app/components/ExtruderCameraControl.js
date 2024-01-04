@@ -5,17 +5,16 @@ import { useEffect, useRef, useState } from 'react'
 import extruderInfo from '../../db/extruder-model.json'
 
 const ExtruderCameraControl = ({ activeStep }) => {
-  const info = useState(extruderInfo)[0]
   const cameraRef = useRef()
 
   useEffect(() => {
     cameraRef.current.setLookAt(
-      info[activeStep].position.x,
-      info[activeStep].position.y,
-      info[activeStep].position.z,
-      info[activeStep].target.x,
-      info[activeStep].target.y,
-      info[activeStep].target.z
+      extruderInfo[activeStep].position.x,
+      extruderInfo[activeStep].position.y,
+      extruderInfo[activeStep].position.z,
+      extruderInfo[activeStep].target.x,
+      extruderInfo[activeStep].target.y,
+      extruderInfo[activeStep].target.z
     )
   }, [activeStep])
 
