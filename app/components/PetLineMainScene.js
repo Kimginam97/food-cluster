@@ -25,14 +25,12 @@ const PetLineMainScene = ({ activeStep }) => {
             xRay={false}
           />
         </EffectComposer>
-
         <PetLineMainModel
           url="/food-cluster/models/PETLINE.fbx"
           activeStep={activeStep}
         />
       </Selection>
 
-      {/* <ExtruderTestModel /> */}
       <PetLineCameraControl activeStep={activeStep} />
     </Canvas>
   )

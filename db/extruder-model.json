@@ -10,7 +10,7 @@
     "target": {
       "x": 0,
       "y": 0,
-      "Z": 0
+      "z": 0
     },
     "startTimeAnimations": [],
     "endTimeAnimations": [
@@ -34,7 +34,7 @@
     "target": {
       "x": 200,
       "y": 80,
-      "Z": 40
+      "z": 40
     },
     "startTimeAnimations": [],
     "endTimeAnimations": [
@@ -58,7 +58,7 @@
     "target": {
       "x": 0,
       "y": 120,
-      "Z": 0
+      "z": 0
     },
     "startTimeAnimations": [],
     "endTimeAnimations": [
@@ -82,7 +82,7 @@
     "target": {
       "x": -200,
       "y": 80,
-      "Z": 120
+      "z": 120
     },
     "startTimeAnimations": ["Brep.1219|Brep.1219Action"],
     "endTimeAnimations": [
@@ -109,7 +109,7 @@
     "target": {
       "x": -360,
       "y": 80,
-      "Z": 150
+      "z": 150
     },
     "startTimeAnimations": ["Brep.1219|Brep.1219Action"],
     "endTimeAnimations": [
@@ -134,7 +134,7 @@
     "target": {
       "x": -500,
       "y": 80,
-      "Z": 200
+      "z": 200
     },
     "startTimeAnimations": [],
     "endTimeAnimations": [
@@ -161,7 +161,7 @@
     "target": {
       "x": -500,
       "y": 80,
-      "Z": 200
+      "z": 200
     },
     "startTimeAnimations": [],
     "endTimeAnimations": [

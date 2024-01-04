@@ -8,13 +8,13 @@ import PetLineMinimapScene from '../components/PetLineMinimapScene'
 
 const InfoContent = ({ activeStep }) => {
   const contents = [
-    '분말형 원료를 일정시간 가열-압축-혼합-용융-성형되도록 가공하는 압출성형기입니다.',
-    '냉각펌프팬, 급수펌프, 오일펌프, 익스트루트 등 압출과정을 위한 운전을 설정합니다.',
-    '장비 초기 세팅이 완료되면, 분말원료를 호퍼에 투입합니다.',
-    '호퍼에 투입된 분말형 원료가 스크류를 통해 가열, 압축, 혼합, 용융됩니다.',
-    '고수분 식물성 조직단백질을 제조하기 위해 압출성형기 끝단에 성형다이를 설치합니다.',
-    '성형다이 설치가 끝나면 성형다이 끝단에 냉각다이를 설치합니다.',
-    '압출성형 공정을 거쳐 식물성 조직 단백질이 제조됩니다.',
+    '음료를 만들기 위해 배합-살균-충진-세척-라벨 부착-적재를 거치는 자동화 공정입니다.',
+    'PET 투입실에서는 음료가 담길 빈 페트병을 투입합니다.',
+    'PET충진실에서는 빈 페트병을 세척하고 음료를 충진한 후 뚜껑을 닫습니다.',
+    '음료가 충진된 페트병을 PET충진실에서 종합포장실로 이동시킵니다.',
+    '음료가 충진된 페트병의 외부를 깨끗하게 세척하고 에어샤워를 통해 물기를 제거합니다.',
+    '깨끗해진 페트병에 음료의 상표를 알 수 있도록 라벨지를 부착합니다.',
+    '박스에 정리된 음료수를 로봇을 이용해 편리하게 옮깁니다.',
   ]
 
   return <div className={styles.infoContent}>{contents[activeStep]}</div>
@@ -64,7 +64,7 @@ const Page = () => {
               <div className={styles.petSystem}>PET Line</div>
             </div>
             <div className={styles.titleSubPet}>
-              <Link href="/pet-line">
+              <Link href="/extruder-system">
                 <Image
                   className={styles.imgNextBlueIcon}
                   src="/food-cluster/ui/pet/img-next-blue.png"
@@ -131,7 +131,7 @@ const Page = () => {
                 />
                 <div className={styles.btnContainer}>
                   <b>{`STEP 01 | `}</b>
-                  <span className={styles.span}>조작 패널 설정</span>
+                  <span className={styles.span}>빈 PET 투입</span>
                 </div>
                 <b className={styles.extB} onClick={() => handleStepClick(1)}>
                   1
@@ -164,7 +164,7 @@ const Page = () => {
                 />
                 <div className={styles.btnContainer}>
                   <b>{`STEP 02 | `}</b>
-                  <span className={styles.span}>호퍼 원료 투입</span>
+                  <span className={styles.span}>PET 충진실</span>
                 </div>
                 <b className={styles.extB} onClick={() => handleStepClick(2)}>
                   2
@@ -197,7 +197,7 @@ const Page = () => {
                 />
                 <div className={styles.btnContainer}>
                   <b>{`STEP 03 | `}</b>
-                  <span className={styles.span}>스크류 동작</span>
+                  <span className={styles.span}>PET 이동</span>
                 </div>
                 <b className={styles.extB} onClick={() => handleStepClick(3)}>
                   3
@@ -230,7 +230,7 @@ const Page = () => {
                 />
                 <div className={styles.btnContainer}>
                   <b>{`STEP 04 | `}</b>
-                  <span className={styles.span}>성형다이 설치</span>
+                  <span className={styles.span}>PET 세척</span>
                 </div>
                 <b className={styles.extB} onClick={() => handleStepClick(4)}>
                   4
@@ -263,7 +263,7 @@ const Page = () => {
                 />
                 <div className={styles.btnContainer}>
                   <b>{`STEP 05 | `}</b>
-                  <span className={styles.span}>냉각다이 고정</span>
+                  <span className={styles.span}>라벨부착</span>
                 </div>
                 <b className={styles.extB} onClick={() => handleStepClick(5)}>
                   5
@@ -291,7 +291,7 @@ const Page = () => {
                 />
                 <div className={styles.btnContainer}>
                   <b>{`STEP 06 | `}</b>
-                  <span className={styles.span}>결과물</span>
+                  <span className={styles.span}>로봇 적재</span>
                 </div>
                 <b className={styles.extB} onClick={() => handleStepClick(6)}>
                   6

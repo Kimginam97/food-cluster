@@ -1,126 +1,118 @@
 [
   {
-    "id": "Brep",
+    "id": "0",
     "name": "ProcessOverView",
     "position": {
-      "x": 1000,
-      "y": 450,
-      "z": 800
-    },
-    "target": {
-      "x": -1000,
-      "y": 0,
-      "Z": 800
-    },
-    "startTimeAnimations": [],
-    "endTimeAnimations": [],
-    "animations": []
-  },
-  {
-    "id": "Brep038",
-    "name": "ControlPanel",
-    "position": {
-      "x": -75,
-      "y": 170,
-      "z": 250
-    },
-    "target": {
-      "x": 200,
-      "y": 80,
-      "Z": 40
-    },
-    "startTimeAnimations": [],
-    "endTimeAnimations": [],
-    "animations": []
-  },
-  {
-    "id": "Brep782",
-    "name": "Hopper",
-    "position": {
-      "x": 60,
-      "y": 140,
-      "z": 60
+      "x": 400,
+      "y": 800,
+      "z": 700
     },
     "target": {
       "x": 0,
-      "y": 120,
-      "Z": 0
+      "y": 100,
+      "z": 700
     },
     "startTimeAnimations": [],
     "endTimeAnimations": [],
     "animations": []
   },
   {
-    "id": "Brep1383",
-    "name": "Screw",
+    "id": "1",
+    "name": "EmptyPet",
     "position": {
-      "x": 20,
-      "y": 90,
-      "z": 120
+      "x": 300,
+      "y": 200,
+      "z": 300
     },
     "target": {
-      "x": -200,
-      "y": 80,
-      "Z": 120
+      "x": 0,
+      "y": 100,
+      "z": 300
     },
     "startTimeAnimations": [],
     "endTimeAnimations": [],
     "animations": []
   },
   {
-    "id": "Brep056",
-    "name": "MoldingDie",
+    "id": "2",
+    "name": "ChargingRoomPet",
     "position": {
-      "x": 10,
-      "y": 90,
-      "z": 200
+      "x": 0,
+      "y": 400,
+      "z": -700
     },
     "target": {
-      "x": -360,
-      "y": 80,
-      "Z": 150
-    },
-    "startTimeAnimations": [],
-    "endTimeAnimations": [
-      "Brep.782|Brep.782Action.001",
-      "Cylinder|CylinderAction.001",
-      "Cylinder.001|CylinderAction.001",
-      "Cylinder.002|CylinderAction.001",
-      "Cylinder.003|CylinderAction.001",
-      "Cylinder.004|CylinderAction.001",
-      "Cylinder.005|CylinderAction.001"
-    ],
-    "animations": []
-  },
-  {
-    "id": "Brep1219",
-    "name": "CoolingDie",
-    "position": {
-      "x": 10,
-      "y": 90,
-      "z": 290
-    },
-    "target": {
-      "x": -500,
-      "y": 80,
-      "Z": 200
+      "x": 0,
+      "y": 0,
+      "z": 0
     },
     "startTimeAnimations": [],
     "endTimeAnimations": [],
     "animations": []
   },
   {
-    "id": "Brep1219",
+    "id": "3",
+    "name": "MovePet",
+    "position": {
+      "x": -350,
+      "y": 200,
+      "z": 400
+    },
+    "target": {
+      "x": 0,
+      "y": 100,
+      "z": 400
+    },
+    "startTimeAnimations": [],
+    "endTimeAnimations": [],
+    "animations": []
+  },
+  {
+    "id": "4",
+    "name": "GroomingPet",
+    "position": {
+      "x": -350,
+      "y": 200,
+      "z": 920
+    },
+    "target": {
+      "x": 0,
+      "y": 100,
+      "z": 920
+    },
+    "startTimeAnimations": [],
+    "endTimeAnimations": [],
+    "animations": []
+  },
+  {
+    "id": "5",
+    "name": "Labeling",
+    "position": {
+      "x": 100,
+      "y": 200,
+      "z": 1300
+    },
+    "target": {
+      "x": -100,
+      "y": 100,
+      "z": 1300
+    },
+    "startTimeAnimations": [],
+    "endTimeAnimations": [],
+    "animations": []
+  },
+  {
+    "id": "6",
     "name": "finish",
     "position": {
-      "x": -30,
-      "y": 90,
-      "z": 320
+      "x": -350,
+      "y": 200,
+      "z": 1800
     },
     "target": {
-      "x": -500,
-      "y": 80,
-      "Z": 200
+      "x": 0,
+      "y": 100,
+      "z": 1800
     },
     "startTimeAnimations": [],
     "endTimeAnimations": [],
