@@ -1,182 +1,100 @@
 [
   {
-    "id": "Brep",
+    "id": "0",
     "name": "ProcessOverView",
     "position": {
-      "x": 50,
-      "y": 170,
-      "z": 370
+      "x": 0.7,
+      "y": 1.5,
+      "z": 4
     },
     "target": {
       "x": 0,
       "y": 0,
       "z": 0
-    },
-    "startTimeAnimations": [],
-    "endTimeAnimations": [
-      "Cylinder|CylinderAction.001",
-      "Cylinder.001|CylinderAction.001",
-      "Cylinder.002|CylinderAction.001",
-      "Cylinder.003|CylinderAction.001",
-      "Cylinder.004|CylinderAction.001",
-      "Cylinder.005|CylinderAction.001"
-    ],
-    "animations": []
+    }
   },
   {
-    "id": "Brep038",
+    "id": "1",
     "name": "ControlPanel",
     "position": {
-      "x": -75,
-      "y": 170,
-      "z": 250
+      "x": -1,
+      "y": 1.5,
+      "z": 2
     },
     "target": {
-      "x": 200,
-      "y": 80,
-      "z": 40
-    },
-    "startTimeAnimations": [],
-    "endTimeAnimations": [
-      "Cylinder|CylinderAction.001",
-      "Cylinder.001|CylinderAction.001",
-      "Cylinder.002|CylinderAction.001",
-      "Cylinder.003|CylinderAction.001",
-      "Cylinder.004|CylinderAction.001",
-      "Cylinder.005|CylinderAction.001"
-    ],
-    "animations": []
+      "x": 10,
+      "y": 0,
+      "z": -2
+    }
   },
   {
-    "id": "Brep782",
+    "id": "2",
     "name": "Hopper",
     "position": {
-      "x": 60,
-      "y": 140,
-      "z": 60
+      "x": 0,
+      "y": 1.5,
+      "z": 1
     },
     "target": {
       "x": 0,
-      "y": 120,
+      "y": 1.2,
       "z": 0
-    },
-    "startTimeAnimations": [],
-    "endTimeAnimations": [
-      "Cylinder|CylinderAction.001",
-      "Cylinder.001|CylinderAction.001",
-      "Cylinder.002|CylinderAction.001",
-      "Cylinder.003|CylinderAction.001",
-      "Cylinder.004|CylinderAction.001",
-      "Cylinder.005|CylinderAction.001"
-    ],
-    "animations": ["Brep.782|Brep.782Action.001"]
+    }
   },
   {
-    "id": "Brep1383",
+    "id": "3",
     "name": "Screw",
     "position": {
-      "x": 20,
-      "y": 90,
-      "z": 120
+      "x": 0,
+      "y": 1,
+      "z": 1
     },
     "target": {
-      "x": -200,
-      "y": 80,
-      "z": 120
-    },
-    "startTimeAnimations": ["Brep.1219|Brep.1219Action"],
-    "endTimeAnimations": [
-      "Brep.054|Brep.054Action",
-      "Brep.056|Brep.056Action",
-      "Brep.1219|Brep.1219Action",
-      "Cylinder|CylinderAction.001",
-      "Cylinder.001|CylinderAction.001",
-      "Cylinder.002|CylinderAction.001",
-      "Cylinder.003|CylinderAction.001",
-      "Cylinder.004|CylinderAction.001",
-      "Cylinder.005|CylinderAction.001"
-    ],
-    "animations": []
+      "x": -1,
+      "y": 0.8,
+      "z": 0.8
+    }
   },
   {
-    "id": "Brep056",
+    "id": "4",
     "name": "MoldingDie",
     "position": {
-      "x": 10,
-      "y": 90,
-      "z": 200
+      "x": 0.3,
+      "y": 1,
+      "z": 2.3
     },
     "target": {
-      "x": -360,
-      "y": 80,
-      "z": 150
-    },
-    "startTimeAnimations": ["Brep.1219|Brep.1219Action"],
-    "endTimeAnimations": [
-      "Brep.782|Brep.782Action.001",
-      "Cylinder|CylinderAction.001",
-      "Cylinder.001|CylinderAction.001",
-      "Cylinder.002|CylinderAction.001",
-      "Cylinder.003|CylinderAction.001",
-      "Cylinder.004|CylinderAction.001",
-      "Cylinder.005|CylinderAction.001"
-    ],
-    "animations": ["Brep.054|Brep.054Action", "Brep.056|Brep.056Action"]
+      "x": -1,
+      "y": 0.9,
+      "z": 1
+    }
   },
   {
-    "id": "Brep1219",
+    "id": "5",
     "name": "CoolingDie",
     "position": {
-      "x": 10,
-      "y": 90,
-      "z": 290
+      "x": 0,
+      "y": 1,
+      "z": 2.3
     },
     "target": {
-      "x": -500,
-      "y": 80,
-      "z": 200
-    },
-    "startTimeAnimations": [],
-    "endTimeAnimations": [
-      "Brep.782|Brep.782Action.001",
-      "Brep.054|Brep.054Action",
-      "Brep.056|Brep.056Action",
-      "Cylinder|CylinderAction.001",
-      "Cylinder.001|CylinderAction.001",
-      "Cylinder.002|CylinderAction.001",
-      "Cylinder.003|CylinderAction.001",
-      "Cylinder.004|CylinderAction.001",
-      "Cylinder.005|CylinderAction.001"
-    ],
-    "animations": ["Brep.1219|Brep.1219Action"]
+      "x": -1,
+      "y": 0.9,
+      "z": 2.2
+    }
   },
   {
-    "id": "Brep1219",
+    "id": "6",
     "name": "finish",
     "position": {
-      "x": -30,
-      "y": 90,
-      "z": 320
+      "x": 0,
+      "y": 1.2,
+      "z": 3.5
     },
     "target": {
-      "x": -500,
-      "y": 80,
-      "z": 200
-    },
-    "startTimeAnimations": [],
-    "endTimeAnimations": [
-      "Brep.782|Brep.782Action.001",
-      "Brep.054|Brep.054Action",
-      "Brep.056|Brep.056Action",
-      "Brep.1219|Brep.1219Action"
-    ],
-    "animations": [
-      "Cylinder|CylinderAction.001",
-      "Cylinder.001|CylinderAction.001",
-      "Cylinder.002|CylinderAction.001",
-      "Cylinder.003|CylinderAction.001",
-      "Cylinder.004|CylinderAction.001",
-      "Cylinder.005|CylinderAction.001"
-    ]
+      "x": -1.5,
+      "y": 0.5,
+      "z": 0
+    }
   }
 ]

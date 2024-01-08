@@ -21,7 +21,7 @@
   align-self: stretch;
   position: relative;
   background-color: #8bc53f;
-  height: 321px;
+  height: 40vh;
 }
 
 .footer {
@@ -186,7 +186,7 @@
   position: relative;
   background-color: #fff;
   width: 100%;
-  height: 1080px;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;

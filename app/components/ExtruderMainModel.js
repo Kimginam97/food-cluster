@@ -1,120 +1,52 @@
-import * as THREE from 'three'
-import { useFBX } from '@react-three/drei'
+import { useAnimations, useGLTF } from '@react-three/drei'
 import { Select } from '@react-three/postprocessing'
-import extruderInfo from '../../db/extruder-model.json'
-import { useEffect, useState } from 'react'
-import { useFrame } from '@react-three/fiber'
+import { useEffect } from 'react'
 
 const ExtruderMainModel = ({ url, activeStep }) => {
-  const fbx = useFBX(url)
-  useFBX.preload(url)
+  const { nodes, animations } = useGLTF(url)
+  useGLTF.preload(url)
 
-  const mixer = new THREE.AnimationMixer(fbx)
-
-  const getObjectByChildName = (childName) => {
-    const index = fbx.children.findIndex((v) => v.name === childName)
-    return index !== -1 ? fbx.children[index] : null
-  }
-
-  const playAnimation = () => {
-    // 이전 애니메이션을 모두 정지
-    mixer.stopAllAction()
-
-    // 애니메이션 시간지정 함수
-    const playAnimationWithStopTime = (clip, stopAtTime) => {
-      const action = mixer.clipAction(clip)
-      action.reset().play()
-      action.time = stopAtTime
-      action.paused = true
-    }
-
-    // 현재 실행할 애니메이션은 반복재생
-    extruderInfo[activeStep].animations.forEach((animationName) => {
-      const clip = fbx.animations.find((animationClip) =>
-        animationClip.name.includes(animationName)
-      )
-      if (clip) {
-        const action = mixer.clipAction(clip)
-        action.loop = THREE.LoopRepeat // 반복 재생
-        action.play()
-      }
-    })
-
-    // 시작하는 시간에 지정해서 멈춰야될 애니메이션
-    extruderInfo[activeStep].startTimeAnimations.forEach((animationName) => {
-      const clip = fbx.animations.find((animationClip) =>
-        animationClip.name.includes(animationName)
-      )
-      if (clip) {
-        switch (clip.name) {
-          case 'Brep.1219|Brep.1219Action':
-            playAnimationWithStopTime(clip, 0)
-            break
-          default:
-            // Handle other animations
-            playAnimationWithStopTime(clip, 0)
-            break
-        }
-      }
-    })
-
-    // 끝나는 시간에 지정해서 멈춰야될 애니메이션
-    extruderInfo[activeStep].endTimeAnimations.forEach((animationName) => {
-      const clip = fbx.animations.find((animationClip) =>
-        animationClip.name.includes(animationName)
-      )
-      if (clip) {
-        switch (clip.name) {
-          case 'Brep.782|Brep.782Action.001':
-            playAnimationWithStopTime(clip, 4.9)
-            break
-          case 'Brep.054|Brep.054Action':
-          case 'Brep.056|Brep.056Action':
-            playAnimationWithStopTime(clip, 3.7)
-            break
-          case 'Brep.1219|Brep.1219Action':
-            playAnimationWithStopTime(clip, 1.2)
-            break
-          default:
-            // Handle other animations
-            playAnimationWithStopTime(clip, 0)
-            break
-        }
-      }
-    })
-  }
+  const { ref, actions } = useAnimations(animations)
 
   useEffect(() => {
-    playAnimation()
-  }, [activeStep])
-
-  useFrame((state, delta) => {
-    if (fbx) {
-      mixer.update(delta)
+    for (let key in actions) {
+      actions[key].play()
     }
-  })
+  }, [actions])
 
   return (
     <>
-      <primitive object={fbx} />
-      {/* 2번 호퍼 */}
-      {/* <Select enabled={activeStep === 2}>
-        <primitive object={getObjectByChildName('Brep834')} />
-      </Select> */}
-      {/* 3번 스크류 */}
-      {/* <Select enabled={activeStep === 3}>
-        <primitive object={getObjectByChildName('Brep1383')} />
-      </Select> */}
-      {/* 4번 성형다이 */}
-      {/* <Select enabled={activeStep === 4}>
-        <primitive object={getObjectByChildName('Brep1385')} />
-        <primitive object={getObjectByChildName('Brep066')} />
-        <primitive object={getObjectByChildName('Brep1391')} />
-      </Select> */}
-      {/* 5번 냉각다이 */}
-      {/* <Select enabled={activeStep === 5}>
-        <primitive object={getObjectByChildName('Brep1219')} />
-      </Select> */}
+      <group ref={ref}>
+        <primitive object={nodes.Scene} />
+        {/* 1번 조작패널 */}
+        <Select enabled={activeStep === 1}>
+          <primitive object={nodes['Brep038']} />
+        </Select>
+        {/* 2번 호퍼 */}
+        <Select enabled={activeStep === 2}>
+          <primitive object={nodes['Brep782']} />
+          <primitive object={nodes['Brep788']} />
+          <primitive object={nodes['Brep834']} />
+        </Select>
+        {/* 3번 스크류 */}
+        <Select enabled={activeStep === 3}>
+          <primitive object={nodes['Brep1383']} />
+        </Select>
+        {/* 4번 성형다이 */}
+        <Select enabled={activeStep === 4}>
+          <primitive object={nodes['Brep054']} />
+          <primitive object={nodes['Brep056']} />
+        </Select>
+        {/* 5번 냉각다이 */}
+        <Select enabled={activeStep === 5}>
+          <primitive object={nodes['Brep1219']} />
+          <primitive object={nodes['Brep015']} />
+          <primitive object={nodes['Brep030']} />
+          <primitive object={nodes['Brep036']} />
+          <primitive object={nodes['Brep037']} />
+          <primitive object={nodes['Brep039']} />
+        </Select>
+      </group>
     </>
   )
 }

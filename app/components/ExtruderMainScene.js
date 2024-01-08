@@ -6,18 +6,16 @@ import ExtruderMainModel from './ExtruderMainModel'
 import ExtruderCameraControl from './ExtruderCameraControl'
 import { Suspense } from 'react'
 import Loader from './Loader'
+import { Environment } from '@react-three/drei'
 
 const ExtruderMainScene = ({ activeStep }) => {
   return (
     <Canvas
       gl={{ logarithmicDepthBuffer: true, antialias: false }}
-      style={{ width: '100%', height: '100%' }}
+      style={{ width: '100%', height: '80vh' }}
     >
       <Suspense fallback={<Loader />}>
-        <directionalLight position={[233, 77, 21]} intensity={0.7} />
-        <directionalLight position={[255, 87, 93]} intensity={0.7} />
-        <directionalLight position={[-195, 192, -135]} intensity={0.7} />
-        <directionalLight position={[-14, 113, 57]} intensity={1} />
+        <Environment preset="city" />
         <Selection>
           <EffectComposer multisampling={1} autoClear={false}>
             <Outline
@@ -30,7 +28,7 @@ const ExtruderMainScene = ({ activeStep }) => {
           </EffectComposer>
 
           <ExtruderMainModel
-            url="/food-cluster/models/Extruder_test.fbx"
+            url="/food-cluster/models/Extruder.glb"
             activeStep={activeStep}
           />
         </Selection>

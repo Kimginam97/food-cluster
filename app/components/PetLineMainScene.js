@@ -6,18 +6,20 @@ import PetLineCameraControl from './PetLineCameraControl'
 import PetLineMainModel from './PetLineMainModel'
 import { Suspense } from 'react'
 import Loader from './Loader'
+import { Environment } from '@react-three/drei'
 
 const PetLineMainScene = ({ activeStep }) => {
   return (
     <Canvas
       gl={{ logarithmicDepthBuffer: true, antialias: false }}
-      style={{ width: '100%', height: '100%' }}
+      style={{ width: '100%', height: '80vh' }}
     >
       <Suspense fallback={<Loader />}>
         <directionalLight position={[5, 10, 7.5]} intensity={0.7} />
         <directionalLight position={[6.7, 10, 1935]} intensity={0.7} />
         <directionalLight position={[-65, 10, -688]} intensity={0.7} />
         <directionalLight position={[-843, 86, 655]} intensity={0.7} />
+        <Environment preset="city" />
         <Selection>
           <EffectComposer multisampling={1} autoClear={false}>
             <Outline
@@ -30,7 +32,7 @@ const PetLineMainScene = ({ activeStep }) => {
           </EffectComposer>
 
           <PetLineMainModel
-            url="/food-cluster/models/PETLINE.fbx"
+            url="/food-cluster/models/PETLine_v0105.fbx"
             activeStep={activeStep}
           />
         </Selection>

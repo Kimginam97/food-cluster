@@ -4,7 +4,6 @@ import styles from './pet.module.css'
 import Image from 'next/image'
 import { useState } from 'react'
 import PetLineMainScene from '../components/PetLineMainScene'
-import PetLineMinimapScene from '../components/PetLineMinimapScene'
 
 const InfoContent = ({ activeStep }) => {
   const contents = [
@@ -304,7 +303,6 @@ const Page = () => {
         <div className={styles.content}>
           <div className={styles.threebg}>
             <PetLineMainScene activeStep={activeStep} />
-            <PetLineMinimapScene activeStep={activeStep} />
           </div>
           <div className={styles.script}>
             <div className={styles.info}>

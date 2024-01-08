@@ -2,7 +2,7 @@
   position: relative;
   background-color: #fff;
   width: 100%;
-  height: 1080px;
+  height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -251,7 +251,7 @@
 
 .content {
   align-self: stretch;
-  height: 798px;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -326,7 +326,7 @@
 .script {
   margin: 0 !important;
   position: absolute;
-  top: 605px;
+  bottom: 5vh;
   left: calc(50% - 687px);
   width: 1373.68px;
   display: flex;
